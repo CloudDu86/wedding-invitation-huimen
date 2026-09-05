@@ -9,11 +9,11 @@
   <!-- Open Graph 社交卡片配置 (微信/QQ/浏览器/Telegram 等分享预览) -->
   <!-- 分享封面图为项目内 share-cover.jpg，部署上线后爬虫会自动按页面地址解析；
        如需更换，可替换同目录下的 share-cover.jpg，或在页面底部「自定义分享卡片」中填写线上图片地址 -->
-  <meta name="description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。杜冠云 &amp; 向可微 诚邀您与我们共同见证幸福时刻！">
+  <meta name="description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。杜冠云 &amp; 向可微 诚邀您与我们共同见证幸福时刻！">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="杜冠云 &amp; 向可微 的婚礼邀请函">
   <meta property="og:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
-  <meta property="og:description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
+  <meta property="og:description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
   <meta property="og:image" content="./share-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1200">
@@ -25,7 +25,7 @@
   <!-- Twitter Card (兼容性补充) -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
-  <meta name="twitter:description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
+  <meta name="twitter:description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
   <meta name="twitter:image" content="./share-cover.jpg">
   <meta name="theme-color" content="#FDFBF7">
   <meta name="format-detection" content="telephone=no, email=no">
@@ -947,8 +947,8 @@
   <!-- Canvas 花瓣粒子飘落动画 -->
   <canvas id="petal-canvas"></canvas>
 
-  <!-- 背景音乐音频 (嵌入经典浪漫婚礼背景音乐) -->
-  <audio id="bg-audio" loop preload="auto" src="./assets/bgm.mp3"></audio>
+  <!-- 背景音乐音频 (默认关闭，用户点击右上角音乐按钮即可自主播放) -->
+  <audio id="bg-audio" loop preload="none" src="./assets/bgm.mp3"></audio>
 
   <!-- 右上角音乐播放器悬浮控件 -->
   <div class="music-ctrl" id="musicBtn" title="播放 / 暂停音乐">
@@ -985,7 +985,7 @@
       </div>
 
       <div class="wedding-date-banner">
-        2026.09.28 周日 18:00
+        2026.09.28 周日 17:28
       </div>
 
       <p class="wedding-venue-text">
@@ -1192,7 +1192,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      /* 1. 微信与全局音频自动播放策略 */
+      /* 1. 音频播放控制（默认关闭，用户轻触右上角音乐图标可自主开启播放） */
       const audio = document.getElementById('bg-audio');
       const musicBtn = document.getElementById('musicBtn');
       let isAudioPlaying = false;
@@ -1212,7 +1212,7 @@
             updateMusicUI(true);
             localStorage.setItem('wedding_music_pref', 'play');
           }).catch(err => {
-            console.log('Audio autoplay prevented:', err);
+            console.log('Audio playback prevented:', err);
           });
         } else {
           audio.pause();
@@ -1222,30 +1222,6 @@
       }
 
       musicBtn.addEventListener('click', togglePlayAudio);
-
-      function autoPlayWeChat() {
-        if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.invoke === 'function') {
-          WeixinJSBridge.invoke('getNetworkType', {}, () => {
-            audio.play().then(() => updateMusicUI(true)).catch(()=>{});
-          });
-        } else {
-          document.addEventListener('WeixinJSBridgeReady', () => {
-            audio.play().then(() => updateMusicUI(true)).catch(()=>{});
-          }, false);
-        }
-      }
-      autoPlayWeChat();
-
-      const unlockAudioOnTouch = () => {
-        const pref = localStorage.getItem('wedding_music_pref');
-        if (pref !== 'pause' && audio.paused) {
-          audio.play().then(() => updateMusicUI(true)).catch(()=>{});
-        }
-        document.removeEventListener('touchstart', unlockAudioOnTouch);
-        document.removeEventListener('click', unlockAudioOnTouch);
-      };
-      document.addEventListener('touchstart', unlockAudioOnTouch, { once: true });
-      document.addEventListener('click', unlockAudioOnTouch, { once: true });
 
       /* 2. Canvas 花瓣粒子飘落动画系统 */
       const canvas = document.getElementById('petal-canvas');
@@ -1310,8 +1286,8 @@
       }
       animatePetals();
 
-      /* 3. 婚礼倒计时逻辑 (可由婚礼流程中的主仪式时刻动态联动，默认 2026-09-28 18:00) */
-      let targetDate = new Date('2026-09-28T18:00:00+08:00').getTime();
+      /* 3. 婚礼倒计时逻辑 (联动主仪式时刻 17:28) */
+      let targetDate = new Date('2026-09-28T17:28:00+08:00').getTime();
       const elDays = document.getElementById('cd-days');
       const elHours = document.getElementById('cd-hours');
       const elMinutes = document.getElementById('cd-minutes');
@@ -1346,6 +1322,7 @@
 
       /* 4. 清理历史遗留自定义缓存，确保展示真实婚纱照与流程 */
       try {
+        localStorage.removeItem('wedding_music_pref');
         localStorage.removeItem('wedding_custom_cover');
         localStorage.removeItem('wedding_gallery_photos');
         localStorage.removeItem('wedding_schedule_list');
@@ -1359,10 +1336,9 @@
       /* 5. 婚礼流程动态渲染与信息联动 */
       const defaultSchedule = Object.freeze([
         { time: "16:30", title: "宾客签到 · 浪漫合影", desc: "迎宾签到台领取定制伴手礼，在花艺签名墙前合影留念" },
-        { time: "17:15", title: "迎宾酒会 · 悠扬乐队", desc: "享用精致迎宾甜品台与特调鸡尾酒，现场爵士轻音乐暖场" },
-        { time: "18:00", title: "神圣仪式 · 爱的誓言", desc: "新人入场、互换婚戒、真挚誓言倾诉与香槟塔盛典" },
-        { time: "18:38", title: "答谢晚宴 · 举杯同庆", desc: "水晶之恋宴会厅佳肴开席，共同举杯分享幸福喜悦" },
-        { time: "19:18", title: "敬酒互动 · 惊喜抽奖", desc: "新人向各席宾客敬酒致谢，趣味互动环节与神秘好礼相送" }
+        { time: "17:28", title: "神圣仪式 · 爱的誓言", desc: "新人入场、互换婚戒、真挚誓言倾诉与香槟塔盛典" },
+        { time: "18:10", title: "答谢晚宴 · 举杯同庆", desc: "水晶之恋宴会厅佳肴开席，共同举杯分享幸福喜悦" },
+        { time: "19:00", title: "敬酒互动 · 惊喜抽奖", desc: "新人向各席宾客敬酒致谢，趣味互动环节与神秘好礼相送" }
       ]);
 
       const scheduleContainer = document.getElementById('scheduleList');
