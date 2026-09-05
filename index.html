@@ -334,6 +334,7 @@
       position: relative;
       text-align: center;
       padding: 80px 24px 40px;
+      background-image: url("./assets/gallery-1.jpg");
       background-size: cover;
       background-position: center;
       transition: background-image 0.5s ease-in-out;
@@ -1359,8 +1360,8 @@
   <!-- Canvas 花瓣粒子飘落动画 -->
   <canvas id="petal-canvas"></canvas>
 
-  <!-- 背景音乐音频 (嵌入经典浪漫婚礼钢琴曲) -->
-  <audio id="bg-audio" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=wedding-piano-112613.mp3"></audio>
+  <!-- 背景音乐音频 (嵌入经典浪漫婚礼背景音乐) -->
+  <audio id="bg-audio" loop preload="auto" src="./assets/bgm.mp3"></audio>
 
   <!-- 右上角音乐播放器悬浮控件 -->
   <div class="music-ctrl" id="musicBtn" title="播放 / 暂停音乐">
@@ -2069,13 +2070,14 @@
       const coverUploader = document.getElementById('coverUploader');
       const resetCoverBtn = document.getElementById('resetCoverBtn');
 
-      const DEFAULT_HERO_BG = 'url("https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80")';
+      const DEFAULT_HERO_BG = 'url("./assets/gallery-1.jpg")';
       
       const savedCover = localStorage.getItem('wedding_custom_cover');
-      if (savedCover) {
+      if (savedCover && !savedCover.includes('unsplash.com')) {
         heroSection.style.backgroundImage = `url("${savedCover}")`;
         resetCoverBtn.style.display = 'inline-block';
       } else {
+        localStorage.removeItem('wedding_custom_cover');
         heroSection.style.backgroundImage = DEFAULT_HERO_BG;
       }
 
@@ -2378,18 +2380,23 @@
 
       /* 5. 婚纱相册相片渲染、批量上传、单张删除、相册清空与全屏灯箱 */
       const defaultPhotos = Object.freeze([
-        "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&auto=format&fit=crop&q=80"
+        "./assets/gallery-1.jpg",
+        "./assets/gallery-2.jpg",
+        "./assets/gallery-3.jpg",
+        "./assets/gallery-4.jpg",
+        "./assets/gallery-5.jpg",
+        "./assets/gallery-6.jpg"
       ]);
 
       let galleryPhotos = null;
       try {
         const savedPhotos = localStorage.getItem('wedding_gallery_photos');
         galleryPhotos = savedPhotos !== null ? JSON.parse(savedPhotos) : null;
+        // 若本地缓存中保存的是旧版示例图（含 unsplash），自动清理并使用最新照片
+        if (Array.isArray(galleryPhotos) && galleryPhotos.some(url => typeof url === 'string' && url.includes('unsplash.com'))) {
+          galleryPhotos = [...defaultPhotos];
+          localStorage.removeItem('wedding_gallery_photos');
+        }
       } catch (e) {
         galleryPhotos = null;
       }
