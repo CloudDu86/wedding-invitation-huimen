@@ -6,27 +6,32 @@
   <title>杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
 
-  <!-- Open Graph 社交卡片配置 (微信/QQ/浏览器/Telegram 等分享预览) -->
-  <!-- 分享封面图为项目内 share-cover.jpg，部署上线后爬虫会自动按页面地址解析；
-       如需更换，可替换同目录下的 share-cover.jpg，或在页面底部「自定义分享卡片」中填写线上图片地址 -->
-  <meta name="description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。杜冠云 &amp; 向可微 诚邀您与我们共同见证幸福时刻！">
+  <!-- 微信 / QQ / 浏览器社交分享卡片全协议配置 (Open Graph / Schema.org itemprop / Twitter Card) -->
+  <meta name="description" itemprop="description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
+  <meta itemprop="name" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
+  <meta itemprop="image" content="https://wedding.cloud8886.cn/share-cover.jpg">
+
+  <!-- Open Graph 协议（微信聊天卡片、朋友圈抓取核心） -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="杜冠云 &amp; 向可微 的婚礼邀请函">
+  <meta property="og:url" content="https://wedding.cloud8886.cn/">
   <meta property="og:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
   <meta property="og:description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
-  <meta property="og:image" content="./share-cover.jpg">
+  <meta property="og:image" content="https://wedding.cloud8886.cn/share-cover.jpg">
+  <meta property="og:image:secure_url" content="https://wedding.cloud8886.cn/share-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1200">
   <meta property="og:image:alt" content="杜冠云 &amp; 向可微 婚礼邀请函封面">
   <meta property="og:locale" content="zh_CN">
-  <!-- 部署上线后如需固定分享地址，可取消下行注释并填写线上链接（不填时爬虫默认使用当前页面地址） -->
-  <!-- <meta property="og:url" content="https://your-domain.com/invite/index.html"> -->
+  <link rel="image_src" href="https://wedding.cloud8886.cn/share-cover.jpg">
 
-  <!-- Twitter Card (兼容性补充) -->
+  <!-- Twitter Card (兼容补充) -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wedding.cloud8886.cn/">
   <meta name="twitter:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
   <meta name="twitter:description" content="2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
-  <meta name="twitter:image" content="./share-cover.jpg">
+  <meta name="twitter:image" content="https://wedding.cloud8886.cn/share-cover.jpg">
   <meta name="theme-color" content="#FDFBF7">
   <meta name="format-detection" content="telephone=no, email=no">
 
@@ -944,6 +949,11 @@
 </head>
 <body>
 
+  <!-- 微信爬虫首图优先抓取（微信机制优先识别 body 最靠前且尺寸 >= 300x300 的图片作为分享卡片缩略图） -->
+  <div style="position:fixed; top:-9999px; left:-9999px; width:0; height:0; overflow:hidden; z-index:-1; opacity:0; pointer-events:none;">
+    <img src="https://wedding.cloud8886.cn/share-cover.jpg" width="350" height="350" alt="微信分享卡片封面">
+  </div>
+
   <!-- Canvas 花瓣粒子飘落动画 -->
   <canvas id="petal-canvas"></canvas>
 
@@ -1604,6 +1614,39 @@
         toastTimer = setTimeout(() => {
           toastBox.classList.remove('show');
         }, 2500);
+      }
+      /* 12. 微信内置浏览器分享协议桥接 (WeixinJSBridge) */
+      const WECHAT_SHARE_DATA = {
+        title: '杜冠云 & 向可微 的婚礼邀请函 | 我们结婚啦',
+        desc: '2026.09.28 周日 17:28 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！',
+        link: 'https://wedding.cloud8886.cn/',
+        img_url: 'https://wedding.cloud8886.cn/share-cover.jpg'
+      };
+
+      function bindWeChatShare() {
+        if (typeof WeixinJSBridge === 'undefined' || typeof WeixinJSBridge.on !== 'function') return;
+        const payload = () => ({
+          title: WECHAT_SHARE_DATA.title,
+          desc: WECHAT_SHARE_DATA.desc,
+          link: WECHAT_SHARE_DATA.link,
+          img_url: WECHAT_SHARE_DATA.img_url
+        });
+        try {
+          // 监听发送给好友
+          WeixinJSBridge.on('menu:share:appmessage', () => WeixinJSBridge.invoke('shareAppMessage', payload()));
+          // 监听分享到朋友圈
+          WeixinJSBridge.on('menu:share:timeline', () => WeixinJSBridge.invoke('shareTimeline', payload()));
+          // 新旧通用分享接口
+          WeixinJSBridge.on('menu:general:share', (general) => {
+            if (general && typeof general.generalShare === 'function') general.generalShare(payload());
+          });
+        } catch (e) { /* ignore */ }
+      }
+
+      if (typeof WeixinJSBridge !== 'undefined') {
+        bindWeChatShare();
+      } else {
+        document.addEventListener('WeixinJSBridgeReady', bindWeChatShare, false);
       }
     });
   </script>
