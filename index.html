@@ -1,0 +1,3228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+
+  <!-- Open Graph 社交卡片配置 (微信/QQ/浏览器/Telegram 等分享预览) -->
+  <!-- 分享封面图为项目内 share-cover.jpg，部署上线后爬虫会自动按页面地址解析；
+       如需更换，可替换同目录下的 share-cover.jpg，或在页面底部「自定义分享卡片」中填写线上图片地址 -->
+  <meta name="description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。杜冠云 &amp; 向可微 诚邀您与我们共同见证幸福时刻！">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="杜冠云 &amp; 向可微 的婚礼邀请函">
+  <meta property="og:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
+  <meta property="og:description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
+  <meta property="og:image" content="https://CloudDu86.github.io/wedding-invitation/share-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="杜冠云 &amp; 向可微 婚礼邀请函封面">
+  <meta property="og:locale" content="zh_CN">
+  <!-- 部署上线后如需固定分享地址，可取消下行注释并填写线上链接（不填时爬虫默认使用当前页面地址） -->
+  <!-- <meta property="og:url" content="https://your-domain.com/invite/index.html"> -->
+
+  <!-- Twitter Card (兼容性补充) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="杜冠云 &amp; 向可微 的婚礼邀请函 | 我们结婚啦">
+  <meta name="twitter:description" content="2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！">
+  <meta name="twitter:image" content="https://CloudDu86.github.io/wedding-invitation/share-cover.jpg">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="format-detection" content="telephone=no, email=no">
+
+  <!-- Google Fonts: 优雅衬线体与艺术手写体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS Variables & Design Tokens (香槟金 + 豆沙粉 + 象牙白 轻奢浪漫体系)
+       ========================================================================== */
+    :root {
+      --gold-primary: #C5A059;
+      --gold-light: #E6CA65;
+      --gold-dark: #8E7135;
+      --gold-gradient: linear-gradient(135deg, #DFBA73 0%, #C5A059 50%, #A9853C 100%);
+      --gold-glow: rgba(197, 160, 89, 0.35);
+      
+      --rose-primary: #D9A5A8;
+      --rose-light: #F7EBEB;
+      --rose-dark: #B57F83;
+      
+      --bg-ivory: #FDFBF7;
+      --bg-warm: #F8F3EC;
+      --bg-card: rgba(255, 255, 255, 0.88);
+      
+      --text-main: #2C2623;
+      --text-secondary: #786C64;
+      --text-muted: #A3968C;
+
+      --font-serif: 'Playfair Display', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+      --font-script: 'Great Vibes', cursive;
+      --font-title: 'Cinzel', 'Noto Serif SC', serif;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --shadow-soft: 0 10px 30px rgba(180, 150, 130, 0.12);
+      --shadow-hover: 0 15px 35px rgba(197, 160, 89, 0.22);
+      --glass-border: 1px solid rgba(223, 186, 115, 0.35);
+    }
+
+    /* Reset & Base Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-ivory);
+      color: var(--text-main);
+      font-family: var(--font-serif);
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+      /* 为底部常驻分享栏预留滚动空间 */
+      padding-bottom: calc(96px + env(safe-area-inset-bottom));
+    }
+
+    /* 全局背景花纹质感 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(232, 197, 200, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(223, 186, 115, 0.12) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Canvas 花瓣飘落背景 */
+    #petal-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* 容器控制 */
+    .section-container {
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .section-subtitle-en {
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* 优雅卡片公用样式 */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: var(--glass-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* 金色透明描边通用按钮 */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 24px;
+      border: 1px solid var(--gold-primary);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      color: var(--gold-dark);
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(197, 160, 89, 0.15);
+    }
+
+    .btn-gold:hover, .btn-gold:active {
+      background: var(--gold-gradient);
+      color: #FFF;
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold-solid {
+      background: var(--gold-gradient);
+      color: #FFF;
+      border: none;
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ==========================================================================
+       固定悬浮控制项：音乐播放器 & 右侧点状导航
+       ========================================================================== */
+    .music-ctrl {
+      position: fixed;
+      top: 20px;
+      right: 18px;
+      z-index: 1000;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s ease;
+    }
+
+    .music-ctrl.playing svg {
+      animation: spinVinyl 5s linear infinite;
+    }
+
+    .music-ctrl svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--gold-primary);
+    }
+
+    .music-notes {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      font-size: 14px;
+      color: var(--gold-primary);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .music-ctrl.playing .music-notes {
+      animation: floatNotes 2.4s ease-in-out infinite;
+    }
+
+    @keyframes spinVinyl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes floatNotes {
+      0% { transform: translateY(0) scale(0.6); opacity: 0; }
+      50% { opacity: 0.9; }
+      100% { transform: translateY(-22px) scale(1.1); opacity: 0; }
+    }
+
+    .floating-dot-nav {
+      position: fixed;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 8px 4px;
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    .nav-dot.active {
+      height: 22px;
+      border-radius: 6px;
+      background: var(--gold-gradient);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+
+    .nav-dot::after {
+      content: attr(data-label);
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) translateX(10px);
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(44, 38, 35, 0.8);
+      color: #fff;
+      font-size: 11px;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+
+    .nav-dot:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* ==========================================================================
+       板块 1: 封面首屏 (Cover / Hero)
+       ========================================================================== */
+    .hero-section {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      text-align: center;
+      padding: 80px 24px 40px;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(253, 251, 247, 0.55) 0%,
+        rgba(253, 251, 247, 0.35) 45%,
+        rgba(253, 251, 247, 0.95) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 480px;
+      margin: auto 0;
+    }
+
+    .hero-badge-en {
+      font-family: var(--font-title);
+      font-size: 0.85rem;
+      letter-spacing: 5px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .hero-headline {
+      font-family: var(--font-script);
+      font-size: 3.4rem;
+      color: var(--gold-primary);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(197, 160, 89, 0.2);
+    }
+
+    .hero-sub-zh {
+      font-size: 1.4rem;
+      letter-spacing: 6px;
+      font-weight: 300;
+      color: var(--text-main);
+      margin-bottom: 24px;
+    }
+
+    .couples-names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .groom-name, .bride-name {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--text-main);
+    }
+
+    .heart-connector {
+      font-size: 1.5rem;
+      color: var(--rose-primary);
+      animation: heartbeat 1.8s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+
+    .wedding-date-banner {
+      display: inline-block;
+      padding: 8px 24px;
+      border-top: 1px solid var(--gold-light);
+      border-bottom: 1px solid var(--gold-light);
+      font-family: var(--font-title);
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      color: var(--gold-dark);
+      margin-top: 14px;
+    }
+
+    .wedding-venue-text {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+    }
+
+    .cover-edit-bar {
+      position: absolute;
+      bottom: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-tiny-tool {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--gold-light);
+      color: var(--text-secondary);
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .scroll-down-guide {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      color: var(--gold-primary);
+      text-decoration: none;
+      animation: bounceArrow 2s infinite;
+      margin-top: 20px;
+    }
+
+    .scroll-down-guide span {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    @keyframes bounceArrow {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-8px); }
+      60% { transform: translateY(-4px); }
+    }
+
+    /* ==========================================================================
+       板块 2: 爱情倒计时 (Countdown)
+       ========================================================================== */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .countdown-card {
+      background: #FFF;
+      border: var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 16px 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .countdown-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold-gradient);
+    }
+
+    .countdown-number {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .countdown-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .countdown-footer-note {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       通用自定义模态框系统 (Modals: 流程编辑 / 回执设置 / 名单查看)
+       ========================================================================== */
+    .app-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(5px);
+    }
+
+    .app-modal.active {
+      display: flex;
+    }
+
+    .app-modal-card {
+      background: #FFF;
+      border-radius: var(--radius-md);
+      max-width: 540px;
+      width: 100%;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      animation: modalFadeIn 0.25s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .app-modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--bg-warm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .app-modal-body {
+      padding: 16px 20px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .app-modal-footer {
+      padding: 14px 20px;
+      border-top: 1px solid var(--bg-warm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: #faf7f2;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+
+    .editor-item-card {
+      background: var(--bg-ivory);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .editor-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(197, 160, 89, 0.25);
+    }
+
+    .editor-item-actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .editor-item-delete {
+      background: rgba(220, 53, 69, 0.08);
+      border: 1px solid rgba(220, 53, 69, 0.25);
+      color: #c94a4a;
+      border-radius: var(--radius-sm);
+      padding: 3px 8px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .editor-item-delete:hover {
+      background: #c94a4a;
+      color: #fff;
+    }
+
+    .schedule-toolbar, .rsvp-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    /* ==========================================================================
+       板块 4: 婚纱相册 (Gallery & Lightbox)
+       ========================================================================== */
+    .gallery-upload-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+      gap: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(223, 186, 115, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item-delete {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 28px;
+      height: 28px;
+      background: rgba(220, 53, 69, 0.88);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 5;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+    }
+
+    .gallery-item-delete:hover,
+    .gallery-item-delete:active {
+      background: #c82333;
+      transform: scale(1.18);
+    }
+
+    /* 灯箱 Lightbox */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      touch-action: none;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-img-wrap {
+      max-width: 90vw;
+      max-height: 85vh;
+      position: relative;
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      color: #FFF;
+      font-size: 32px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+
+    .lightbox-del-btn {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      color: #fff;
+      background: rgba(220, 53, 69, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-del-btn:hover {
+      background: #c82333;
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       板块 5: 婚礼信息与一键导航 (Wedding Info & Map)
+       ========================================================================== */
+    .info-grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .info-card-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--rose-light);
+      border: 1px solid var(--rose-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--gold-dark);
+    }
+
+    .info-details h4 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .info-details p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    #infoScheduleTextLine {
+      margin-top: 4px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .info-step-text strong {
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .info-step-sep {
+      color: rgba(197, 160, 89, 0.45);
+      margin: 0 4px;
+    }
+
+    .venue-map-preview {
+      margin-top: 14px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      position: relative;
+      background: #f0eae1;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .nav-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2100;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .nav-modal.active {
+      display: flex;
+    }
+
+    .nav-sheet {
+      background: #FFF;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px 20px 0 0;
+      padding: 24px 20px;
+      text-align: center;
+      animation: slideUpSheet 0.3s ease;
+    }
+
+    @keyframes slideUpSheet {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .nav-sheet h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .nav-sheet p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .nav-links-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-app-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      background: var(--bg-warm);
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .nav-sheet-cancel {
+      margin-top: 14px;
+      padding: 10px;
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       板块 6: 婚礼流程 (Schedule)
+       ========================================================================== */
+    .schedule-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .schedule-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(223, 186, 115, 0.25);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+    }
+
+    .schedule-time-box {
+      min-width: 68px;
+      text-align: center;
+      padding-right: 14px;
+      border-right: 1.5px solid var(--gold-light);
+    }
+
+    .schedule-time {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+    }
+
+    .schedule-content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .schedule-content p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       板块 7: 出席回执 (RSVP Form)
+       ========================================================================== */
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .form-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      background: rgba(255, 255, 255, 0.9);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .segmented-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .segmented-pill {
+      position: relative;
+    }
+
+    .segmented-pill input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .segmented-label {
+      display: block;
+      text-align: center;
+      padding: 10px 4px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+
+    .segmented-pill input:checked + .segmented-label {
+      background: var(--gold-gradient);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 2px 8px var(--gold-glow);
+    }
+
+    /* ==========================================================================
+       板块 8: 交通指引 (Traffic)
+       ========================================================================== */
+    .traffic-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .traffic-card {
+      background: rgba(255, 255, 255, 0.7);
+      border: var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .traffic-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--rose-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold-dark);
+      font-size: 1.2rem;
+    }
+
+    .traffic-info h4 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .traffic-info p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       板块 9: 互动祝福墙 (Guestbook Wall)
+       ========================================================================== */
+    .guestbook-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .guestbook-item {
+      background: #FFF;
+      border: 1px solid rgba(223, 186, 115, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .guestbook-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .guestbook-author {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--gold-dark);
+    }
+
+    .guestbook-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .guestbook-content {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .guestbook-like {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: var(--rose-dark);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       板块 10: 尾页与致谢 (Outro & Back to Top)
+       ========================================================================== */
+    .outro-section {
+      text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
+    }
+
+    .outro-heart-icon {
+      font-size: 2.2rem;
+      color: var(--rose-primary);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .outro-message {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .outro-signature {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .outro-recap {
+      font-size: 0.85rem;
+      color: var(--gold-dark);
+      letter-spacing: 1px;
+      margin-bottom: 36px;
+    }
+
+    .back-to-top-btn {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wechat-share-mask {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 3000;
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 20px 30px;
+      color: #FFF;
+    }
+
+    .wechat-share-mask.active {
+      display: flex;
+    }
+
+    .share-arrow-guide {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      animation: bounceShare 1.5s infinite;
+    }
+
+    .share-text-box {
+      text-align: right;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    @keyframes bounceShare {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px) translateX(-5px); }
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      background: rgba(44, 38, 35, 0.9);
+      color: #FFF;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .fade-up-element {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fade-up-element.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       板块 11: 底部固定分享栏 (微信分享优化)
+       ========================================================================== */
+    .share-bar {
+      position: fixed;
+      left: 50%;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 26px 10px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      box-shadow: 0 10px 30px rgba(180, 150, 130, 0.3);
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    }
+
+    .share-bar:hover, .share-bar:active {
+      transform: translateX(-50%) scale(1.03);
+      box-shadow: 0 14px 36px rgba(197, 160, 89, 0.38);
+    }
+
+    .share-bar-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(197, 160, 89, 0.35);
+      flex-shrink: 0;
+    }
+
+    .share-bar-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .share-bar-text {
+      text-align: left;
+      line-height: 1.3;
+    }
+
+    .share-bar-text b {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: 1px;
+    }
+
+    .share-bar-text span {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Canvas 花瓣粒子飘落动画 -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- 背景音乐音频 (嵌入经典浪漫婚礼钢琴曲) -->
+  <audio id="bg-audio" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=wedding-piano-112613.mp3"></audio>
+
+  <!-- 右上角音乐播放器悬浮控件 -->
+  <div class="music-ctrl" id="musicBtn" title="播放 / 暂停音乐">
+    <div class="music-notes">♪</div>
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/>
+    </svg>
+  </div>
+
+  <!-- 右侧悬浮点状导航 -->
+  <nav class="floating-dot-nav" id="dotNav">
+    <div class="nav-dot active" data-target="hero" data-label="封面"></div>
+    <div class="nav-dot" data-target="countdown" data-label="倒计时"></div>
+    <div class="nav-dot" data-target="gallery" data-label="婚纱相册"></div>
+    <div class="nav-dot" data-target="info" data-label="婚礼信息"></div>
+    <div class="nav-dot" data-target="schedule" data-label="当日流程"></div>
+    <div class="nav-dot" data-target="rsvp" data-label="出席回执"></div>
+    <div class="nav-dot" data-target="traffic" data-label="交通指引"></div>
+    <div class="nav-dot" data-target="guestbook" data-label="祝福墙"></div>
+    <div class="nav-dot" data-target="outro" data-label="感谢致辞"></div>
+  </nav>
+
+  <!-- 1. 封面首屏 -->
+  <header class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content fade-up-element">
+      <span class="hero-badge-en">Save The Date</span>
+      <h1 class="hero-headline">We Are Getting Married</h1>
+      <p class="hero-sub-zh">我们结婚啦</p>
+
+      <div class="couples-names">
+        <span class="groom-name">杜冠云</span>
+        <span class="heart-connector">❤</span>
+        <span class="bride-name">向可微</span>
+      </div>
+
+      <div class="wedding-date-banner">
+        2026.09.28 周日 18:00
+      </div>
+
+      <p class="wedding-venue-text">
+        舒城县南聚金陵大酒店 · 水晶之恋
+      </p>
+    </div>
+
+    <!-- 自定义封面管理与向下滚动指引 -->
+    <div class="cover-edit-bar">
+      <label class="btn-tiny-tool" for="coverUploader" title="上传本地图片作为封面背景">
+        📷 更换封面
+      </label>
+      <input type="file" id="coverUploader" accept="image/*" style="display:none">
+      <button class="btn-tiny-tool" id="resetCoverBtn" style="display:none;">恢复默认</button>
+    </div>
+
+    <a href="#countdown" class="scroll-down-guide">
+      <span>向下滑动</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- 2. 爱情倒计时 -->
+  <section class="section-container" id="countdown">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Countdown</span>
+      <h2 class="section-title">爱情倒计时</h2>
+    </div>
+
+    <div class="countdown-grid fade-up-element" id="countdownGrid">
+      <div class="countdown-card">
+        <div class="countdown-number" id="cd-days">00</div>
+        <div class="countdown-label">DAYS 天</div>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-number" id="cd-hours">00</div>
+        <div class="countdown-label">HOURS 时</div>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-number" id="cd-minutes">00</div>
+        <div class="countdown-label">MINS 分</div>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-number" id="cd-seconds">00</div>
+        <div class="countdown-label">SECS 秒</div>
+      </div>
+    </div>
+
+    <p class="countdown-footer-note fade-up-element" id="cd-status-text">
+      ✨ 距离开启崭新人生乐章，还有一段美好的期待
+    </p>
+  </section>
+
+
+  <!-- 4. 婚纱相册 -->
+  <section class="section-container" id="gallery">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Moments</span>
+      <h2 class="section-title">婚纱相册</h2>
+    </div>
+
+    <div class="gallery-upload-toolbar fade-up-element">
+      <button class="btn-tiny-tool" id="resetGalleryBtn" style="font-size:0.82rem; padding: 6px 14px; display:none;">
+        ↺ 恢复默认照片
+      </button>
+      <button class="btn-tiny-tool" id="clearGalleryBtn" style="font-size:0.82rem; padding: 6px 14px; color:#c94a4a;">
+        🗑️ 清空相册
+      </button>
+      <label class="btn-gold" for="galleryUploader" style="font-size:0.82rem; padding: 6px 14px; cursor:pointer;">
+        ➕ 添加照片
+      </label>
+      <input type="file" id="galleryUploader" multiple accept="image/*" style="display:none">
+    </div>
+
+    <div class="gallery-grid fade-up-element" id="galleryGrid"></div>
+  </section>
+
+  <!-- 全屏灯箱 Modal -->
+  <div class="lightbox-modal" id="lightbox">
+    <button class="lightbox-del-btn" id="lightboxDelBtn" title="删除此照片">🗑️ 删除此张</button>
+    <div class="lightbox-close" id="lightboxClose">&times;</div>
+    <div class="lightbox-arrow lightbox-prev" id="lightboxPrev">&#10094;</div>
+    <div class="lightbox-arrow lightbox-next" id="lightboxNext">&#10095;</div>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="婚纱照大图">
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
+  </div>
+
+  <!-- 5. 婚礼信息与一键导航 -->
+  <section class="section-container" id="info">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Wedding Details</span>
+      <h2 class="section-title">婚礼信息</h2>
+    </div>
+
+    <div class="glass-card fade-up-element">
+      <div class="info-grid">
+        <div class="info-card-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 14.5v-4.5H8v-2h4.5V5.5h2v4.5H19v2h-4.5v4.5h-2z"/></svg>
+          </div>
+          <div class="info-details">
+            <h4>吉日吉时</h4>
+            <p>2026 年 09 月 28 日（农历八月十八） 周日</p>
+            <p id="infoScheduleTextLine">
+              <!-- 动态同步自婚礼流程 -->
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="info-details">
+            <h4>盛宴地点</h4>
+            <p><strong>舒城县南聚金陵大酒店 · 水晶之恋厅</strong></p>
+            <p>安徽省六安市舒城县南聚金陵大酒店</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-map-preview">
+        <p style="font-weight:600; color:var(--text-main); margin-bottom:4px;">舒城县南聚金陵大酒店</p>
+        <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:12px;">水晶之恋宴会大厅</p>
+        <button class="btn-gold" id="openNavSheetBtn">
+          📍 一键导航到酒店
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 导航呼起模态框 -->
+  <div class="nav-modal" id="navModal">
+    <div class="nav-sheet">
+      <h3>选择导航应用</h3>
+      <p>舒城县南聚金陵大酒店 (水晶之恋)</p>
+      <div class="nav-links-group">
+        <a href="https://uri.amap.com/marker?position=116.944,31.464&name=舒城县南聚金陵大酒店" target="_blank" class="nav-app-btn">
+          🗺️ 高德地图
+        </a>
+        <a href="https://api.map.baidu.com/marker?location=31.464,116.944&title=舒城县南聚金陵大酒店&content=水晶之恋&output=html" target="_blank" class="nav-app-btn">
+          🧭 百度地图
+        </a>
+        <a href="https://apis.map.qq.com/uri/v1/marker?marker=coord:31.464,116.944;title:舒城县南聚金陵大酒店" target="_blank" class="nav-app-btn">
+          🚗 腾讯地图
+        </a>
+        <button class="nav-app-btn" id="copyAddrBtn" style="background:#FFF;">
+          📋 复制酒店详细地址
+        </button>
+      </div>
+      <button class="nav-sheet-cancel" id="closeNavSheetBtn">取消</button>
+    </div>
+  </div>
+
+  <!-- 5. 婚礼流程 -->
+  <section class="section-container" id="schedule">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Wedding Program</span>
+      <h2 class="section-title">婚礼流程</h2>
+    </div>
+
+    <div class="schedule-toolbar fade-up-element">
+      <button class="btn-tiny-tool" id="resetScheduleBtn" style="font-size:0.82rem; padding: 6px 14px; display:none;">
+        ↺ 恢复默认流程
+      </button>
+      <button class="btn-gold" id="editScheduleBtn" style="font-size:0.82rem; padding: 6px 14px; cursor:pointer;">
+        ✏️ 编辑婚礼流程
+      </button>
+    </div>
+
+    <div class="schedule-list fade-up-element" id="scheduleList">
+      <!-- 动态从 JavaScript/LocalStorage 渲染 -->
+    </div>
+  </section>
+
+  <!-- 6. 出席回执 -->
+  <section class="section-container" id="rsvp">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">RSVP</span>
+      <h2 class="section-title">出席回执</h2>
+    </div>
+
+    <div class="rsvp-toolbar fade-up-element" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+      <div id="rsvpSubmittedNotice" style="font-size:0.82rem; color:var(--gold-dark); display:none; align-items:center; gap:6px;">
+        <span>✅ 您已提交回执</span>
+        <button type="button" id="editMyRsvpBtn" style="background:none; border:none; color:var(--gold-dark); text-decoration:underline; cursor:pointer; font-size:0.82rem;">[✏️ 修改我的回执]</button>
+      </div>
+      <div style="display:flex; gap:8px; margin-left:auto;">
+        <button class="btn-tiny-tool" id="resetRsvpConfigBtn" style="font-size:0.82rem; padding: 6px 12px; display:none;">
+          ↺ 恢复默认设置
+        </button>
+        <button class="btn-tiny-tool" id="viewRsvpRecordsBtn" style="font-size:0.82rem; padding: 6px 12px; color:var(--gold-dark);">
+          📋 查看回执名单
+        </button>
+        <button class="btn-gold" id="editRsvpConfigBtn" style="font-size:0.82rem; padding: 6px 12px; cursor:pointer;">
+          ✏️ 编辑回执设置
+        </button>
+      </div>
+    </div>
+
+    <div class="glass-card fade-up-element">
+      <p class="rsvp-tip-text" id="rsvpTipText" style="text-align:center; font-size:0.86rem; color:var(--text-secondary); margin-bottom:18px; padding:10px 14px; background:rgba(197,160,89,0.08); border-radius:var(--radius-sm); border:1px solid rgba(197,160,89,0.2);">
+        ✨ 诚邀各位亲友于2026年9月20日前确认出席，便于我们为您提前安排专属席位
+      </p>
+
+      <form class="rsvp-form" id="rsvpForm">
+        <div class="form-item">
+          <label class="form-label" for="guestName">您的姓名 *</label>
+          <input type="text" id="guestName" class="form-input" placeholder="请输入您的尊姓大名" required>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label">出席人数 *</label>
+          <div class="segmented-group" id="rsvpSegmentedGroup">
+            <div class="segmented-pill">
+              <input type="radio" name="attendCount" id="att1" value="1人" checked>
+              <label for="att1" class="segmented-label" id="labelAtt1">1人出席</label>
+            </div>
+            <div class="segmented-pill">
+              <input type="radio" name="attendCount" id="att2" value="2人">
+              <label for="att2" class="segmented-label" id="labelAtt2">2人出席</label>
+            </div>
+            <div class="segmented-pill">
+              <input type="radio" name="attendCount" id="att3" value="携家眷(3人以上)">
+              <label for="att3" class="segmented-label" id="labelAtt3">携家眷(3人+)</label>
+            </div>
+            <div class="segmented-pill">
+              <input type="radio" name="attendCount" id="att0" value="遗憾无法到场">
+              <label for="att0" class="segmented-label" id="labelAtt0">遗憾无法到场</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label" for="guestPhone">联系电话 *</label>
+          <input type="tel" id="guestPhone" class="form-input" placeholder="请输入手机号码 (用于座位安排通知)" required>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label" for="guestWish">新婚祝福语</label>
+          <textarea id="guestWish" class="form-textarea" rows="3" placeholder="写下您对新人的真挚祝福，将同步呈现在祝福墙上..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-gold btn-gold-solid" id="rsvpSubmitBtn" style="padding:14px; margin-top:8px;">
+          💌 确认提交出席回执
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 8. 交通指引 -->
+  <section class="section-container" id="traffic">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Transportation</span>
+      <h2 class="section-title">交通指引</h2>
+    </div>
+
+    <div class="traffic-grid fade-up-element">
+      <div class="traffic-card">
+        <div class="traffic-badge">🚗</div>
+        <div class="traffic-info">
+          <h4>自驾车行与停车指引</h4>
+          <p>导航终点设为“舒城县南聚金陵大酒店”。酒店配备地下及地面大型专属停车场，宴会宾客免费停车，宴会厅直达电梯位于地库 A 区。</p>
+        </div>
+      </div>
+
+      <div class="traffic-card">
+        <div class="traffic-badge">🚄</div>
+        <div class="traffic-info">
+          <h4>高铁与公共交通</h4>
+          <p>高铁抵达【舒城东站】，出站乘出租车或网约车约 15 分钟即可直达酒店正门；亦可乘坐市内公交直达附近站点。</p>
+        </div>
+      </div>
+
+      <div class="traffic-card">
+        <div class="traffic-badge">🏨</div>
+        <div class="traffic-info">
+          <h4>住宿温馨关怀</h4>
+          <p>酒店为远道而来的至亲好友提供婚礼特惠协议客房。如需入住，请在回执中备注或提前联系新人以便妥善协调。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 互动祝福墙 -->
+  <section class="section-container" id="guestbook">
+    <div class="section-header fade-up-element">
+      <span class="section-subtitle-en">Wishes Wall</span>
+      <h2 class="section-title">互动祝福墙</h2>
+    </div>
+
+    <div class="glass-card fade-up-element">
+      <div class="guestbook-list" id="guestbookList"></div>
+    </div>
+  </section>
+
+  <!-- 10. 尾页与致谢 -->
+  <footer class="outro-section" id="outro">
+    <div class="outro-heart-icon">❦</div>
+    <p class="outro-message">
+      “感谢生命里的每一次相遇，<br>更感谢不远万里前来见证我们幸福的你。”
+    </p>
+    <div class="outro-signature">杜冠云 & 向可微</div>
+    <div class="outro-recap">
+      2026.09.28 舒城县南聚金陵大酒店 水晶之恋
+    </div>
+
+    <div style="margin-bottom: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+      <button class="btn-gold" id="shareWxBtn">
+        📲 分享给微信好友
+      </button>
+      <button class="btn-tiny-tool" id="openShareConfigBtn" style="font-size:0.78rem; padding:6px 16px;">
+        ⚙️ 自定义分享标题 · 描述 · 封面
+      </button>
+    </div>
+
+    <div>
+      <button class="btn-tiny-tool back-to-top-btn" id="backToTopBtn">
+        ↑ 回到顶部
+      </button>
+    </div>
+  </footer>
+
+  <!-- 微信分享引导蒙层 -->
+  <div class="wechat-share-mask" id="shareMask">
+    <svg class="share-arrow-guide" viewBox="0 0 100 100" fill="none" stroke="#E6CA65" stroke-width="4" stroke-linecap="round">
+      <path d="M20 70 Q 50 30, 80 15"/>
+      <path d="M65 15 L 80 15 L 80 30"/>
+    </svg>
+    <div class="share-text-box">
+      <p style="font-size:1.25rem; font-weight:600; margin-bottom:6px; color:#E6CA65;">点击右上角「···」</p>
+      <p>分享给好友或朋友圈</p>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.7); margin-top:10px;">点击任意位置关闭提示</p>
+    </div>
+  </div>
+
+  <!-- 1. 婚礼流程 编辑模态框 -->
+  <div class="app-modal" id="scheduleModal">
+    <div class="app-modal-card">
+      <div class="app-modal-header">
+        <h3 style="font-size:1.15rem; color:var(--text-main);">✏️ 编辑婚礼流程</h3>
+        <button type="button" id="closeScheduleModalBtn" style="background:none; border:none; font-size:26px; cursor:pointer; color:var(--text-muted);">&times;</button>
+      </div>
+      <div class="app-modal-body" id="scheduleEditorContainer">
+        <!-- 动态生成各环节表单 -->
+      </div>
+      <div style="padding: 0 20px 12px;">
+        <button type="button" class="btn-tiny-tool" id="addScheduleItemBtn" style="width:100%; padding:9px; border-style:dashed; color:var(--gold-dark); background:#fcf9f4;">
+          + 添加新流程环节
+        </button>
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn-tiny-tool" id="resetScheduleDefaultBtn" style="color:#8E7135;">恢复默认流程</button>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn-tiny-tool" id="cancelScheduleBtn">取消</button>
+          <button type="button" class="btn-gold btn-gold-solid" id="saveScheduleBtn" style="font-size:0.85rem; padding:7px 18px;">保存流程</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 出席回执设置 编辑模态框 -->
+  <div class="app-modal" id="rsvpConfigModal">
+    <div class="app-modal-card">
+      <div class="app-modal-header">
+        <h3 style="font-size:1.15rem; color:var(--text-main);">✏️ 编辑回执设置与文案</h3>
+        <button type="button" id="closeRsvpConfigModalBtn" style="background:none; border:none; font-size:26px; cursor:pointer; color:var(--text-muted);">&times;</button>
+      </div>
+      <div class="app-modal-body">
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:4px;">顶部温馨提示 / 截止说明</label>
+          <textarea id="cfgRsvpTip" class="form-textarea" rows="2" style="font-size:0.85rem; padding:8px 10px;" placeholder="如：诚邀各位亲友于2026年9月20日前确认出席，便于安排坐席..."></textarea>
+        </div>
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:6px;">出席人数单选项自定义 (4项)</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div>
+              <label style="font-size:0.75rem; color:var(--text-muted);">选项一文案</label>
+              <input type="text" id="cfgOpt1" class="form-input" style="font-size:0.85rem; padding:6px 8px;" placeholder="1人出席">
+            </div>
+            <div>
+              <label style="font-size:0.75rem; color:var(--text-muted);">选项二文案</label>
+              <input type="text" id="cfgOpt2" class="form-input" style="font-size:0.85rem; padding:6px 8px;" placeholder="2人出席">
+            </div>
+            <div>
+              <label style="font-size:0.75rem; color:var(--text-muted);">选项三文案</label>
+              <input type="text" id="cfgOpt3" class="form-input" style="font-size:0.85rem; padding:6px 8px;" placeholder="携家眷(3人+)">
+            </div>
+            <div>
+              <label style="font-size:0.75rem; color:var(--text-muted);">选项四文案</label>
+              <input type="text" id="cfgOpt4" class="form-input" style="font-size:0.85rem; padding:6px 8px;" placeholder="遗憾无法到场">
+            </div>
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:4px;">提交按钮显示文字</label>
+          <input type="text" id="cfgSubmitBtn" class="form-input" style="font-size:0.85rem; padding:7px 10px;" placeholder="如：💌 确认提交出席回执">
+        </div>
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn-tiny-tool" id="resetRsvpConfigDefaultBtn" style="color:#8E7135;">恢复默认文案</button>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn-tiny-tool" id="cancelRsvpConfigBtn">取消</button>
+          <button type="button" class="btn-gold btn-gold-solid" id="saveRsvpConfigBtn" style="font-size:0.85rem; padding:7px 18px;">保存设置</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 出席回执数据查看与管理模态框 -->
+  <div class="app-modal" id="rsvpRecordsModal">
+    <div class="app-modal-card">
+      <div class="app-modal-header">
+        <h3 style="font-size:1.15rem; color:var(--text-main);">📋 宾客回执名单管理</h3>
+        <button type="button" id="closeRsvpRecordsModalBtn" style="background:none; border:none; font-size:26px; cursor:pointer; color:var(--text-muted);">&times;</button>
+      </div>
+      <div class="app-modal-body">
+        <div id="rsvpStatsBar" style="display:flex; justify-content:space-around; background:var(--bg-ivory); border:1px solid rgba(197,160,89,0.3); border-radius:var(--radius-sm); padding:10px 6px; text-align:center;">
+          <div><div style="font-size:1.15rem; font-weight:700; color:var(--gold-dark);" id="statTotalCount">0</div><div style="font-size:0.75rem; color:var(--text-muted);">回执总份数</div></div>
+          <div style="border-left:1px solid rgba(197,160,89,0.2); padding-left:12px;"><div style="font-size:1.15rem; font-weight:700; color:#2e7d32;" id="statAttendCount">0</div><div style="font-size:0.75rem; color:var(--text-muted);">预计到场人数</div></div>
+          <div style="border-left:1px solid rgba(197,160,89,0.2); padding-left:12px;"><div style="font-size:1.15rem; font-weight:700; color:#c94a4a;" id="statRegretCount">0</div><div style="font-size:0.75rem; color:var(--text-muted);">无法到场份数</div></div>
+        </div>
+        <div id="rsvpRecordsList" style="display:flex; flex-direction:column; gap:10px; max-height:45vh; overflow-y:auto; margin-top:8px;">
+          <!-- 动态渲染宾客名单列表 -->
+        </div>
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn-tiny-tool" id="clearRsvpRecordsBtn" style="color:#c94a4a;">清空回执记录</button>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn-tiny-tool" id="copyRsvpRecordsBtn">📋 复制名单表格</button>
+          <button type="button" class="btn-gold btn-gold-solid" id="doneRsvpRecordsBtn" style="font-size:0.85rem; padding:7px 18px;">完成</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部固定分享栏 (微信分享优化：微信内唤起右上角引导，其他环境走系统分享/复制链接) -->
+  <div class="share-bar" id="shareBar" role="button" aria-label="分享婚礼邀请函">
+    <span class="share-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+    </span>
+    <span class="share-bar-text">
+      <b>分享邀请函</b>
+      <span>微信好友 · 朋友圈</span>
+    </span>
+  </div>
+
+  <!-- 非微信环境分享弹层 -->
+  <div class="nav-modal" id="shareSheet">
+    <div class="nav-sheet">
+      <h3>分享婚礼邀请函</h3>
+      <p>复制链接发送给微信好友，或在微信中打开本页后点击右上角「···」分享给好友 / 朋友圈</p>
+      <div class="nav-links-group">
+        <button class="nav-app-btn" id="copyShareLinkBtn" style="background:#FFF; justify-content:center;">
+          📋 复制邀请链接
+        </button>
+        <button class="nav-app-btn" id="showShareGuideBtn" style="justify-content:center;">
+          💬 查看微信分享引导
+        </button>
+      </div>
+      <button class="nav-sheet-cancel" id="closeShareSheetBtn">取消</button>
+    </div>
+  </div>
+
+  <!-- 分享卡片设置模态框 -->
+  <div class="app-modal" id="shareConfigModal">
+    <div class="app-modal-card">
+      <div class="app-modal-header">
+        <h3 style="font-size:1.15rem; color:var(--text-main);">⚙️ 自定义分享卡片</h3>
+        <button type="button" id="closeShareConfigBtn" style="background:none; border:none; font-size:26px; cursor:pointer; color:var(--text-muted);">&times;</button>
+      </div>
+      <div class="app-modal-body">
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:4px;">分享标题 (微信聊天卡片 / 浏览器标签标题)</label>
+          <input type="text" id="cfgShareTitle" class="form-input" style="font-size:0.85rem; padding:8px 10px;" placeholder="如：杜冠云 & 向可微 的婚礼邀请函 | 我们结婚啦">
+        </div>
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:4px;">分享描述</label>
+          <textarea id="cfgShareDesc" class="form-textarea" rows="3" style="font-size:0.85rem; padding:8px 10px;" placeholder="如：2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋"></textarea>
+        </div>
+        <div>
+          <label style="font-size:0.8rem; font-weight:600; color:var(--gold-dark); display:block; margin-bottom:4px;">分享封面图地址</label>
+          <input type="text" id="cfgShareImage" class="form-input" style="font-size:0.85rem; padding:8px 10px;" placeholder="如：./share-cover.jpg 或线上图片 https://...">
+        </div>
+        <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.6;">
+          💡 提示：封面图建议使用 1:1 或 5:4 比例的 JPG/PNG；部署上线后请确认图片可被微信 / QQ 等正常抓取，线上分享请填写图片绝对地址。
+        </p>
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn-tiny-tool" id="resetShareConfigBtn" style="color:#8E7135;">恢复默认</button>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn-tiny-tool" id="cancelShareConfigBtn">取消</button>
+          <button type="button" class="btn-gold btn-gold-solid" id="saveShareConfigBtn" style="font-size:0.85rem; padding:7px 18px;">保存设置</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全局 Toast 提示容器 -->
+  <div class="toast-msg" id="toastBox">提示文本</div>
+
+  <!-- 交互核心 JavaScript 脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* 1. 微信与全局音频自动播放策略 */
+      const audio = document.getElementById('bg-audio');
+      const musicBtn = document.getElementById('musicBtn');
+      let isAudioPlaying = false;
+
+      function updateMusicUI(playing) {
+        isAudioPlaying = playing;
+        if (playing) {
+          musicBtn.classList.add('playing');
+        } else {
+          musicBtn.classList.remove('playing');
+        }
+      }
+
+      function togglePlayAudio() {
+        if (audio.paused) {
+          audio.play().then(() => {
+            updateMusicUI(true);
+            localStorage.setItem('wedding_music_pref', 'play');
+          }).catch(err => {
+            console.log('Audio autoplay prevented:', err);
+          });
+        } else {
+          audio.pause();
+          updateMusicUI(false);
+          localStorage.setItem('wedding_music_pref', 'pause');
+        }
+      }
+
+      musicBtn.addEventListener('click', togglePlayAudio);
+
+      function autoPlayWeChat() {
+        if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.invoke === 'function') {
+          WeixinJSBridge.invoke('getNetworkType', {}, () => {
+            audio.play().then(() => updateMusicUI(true)).catch(()=>{});
+          });
+        } else {
+          document.addEventListener('WeixinJSBridgeReady', () => {
+            audio.play().then(() => updateMusicUI(true)).catch(()=>{});
+          }, false);
+        }
+      }
+      autoPlayWeChat();
+
+      const unlockAudioOnTouch = () => {
+        const pref = localStorage.getItem('wedding_music_pref');
+        if (pref !== 'pause' && audio.paused) {
+          audio.play().then(() => updateMusicUI(true)).catch(()=>{});
+        }
+        document.removeEventListener('touchstart', unlockAudioOnTouch);
+        document.removeEventListener('click', unlockAudioOnTouch);
+      };
+      document.addEventListener('touchstart', unlockAudioOnTouch, { once: true });
+      document.addEventListener('click', unlockAudioOnTouch, { once: true });
+
+      /* 2. Canvas 花瓣粒子飘落动画系统 */
+      const canvas = document.getElementById('petal-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const PETAL_COUNT = 24;
+      const petals = [];
+
+      class Petal {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * -height;
+          this.size = Math.random() * 8 + 8;
+          this.speedY = Math.random() * 1.2 + 0.8;
+          this.speedX = Math.random() * 1.5 - 0.75;
+          this.rotation = Math.random() * 360;
+          this.rotSpeed = Math.random() * 1.5 - 0.75;
+          this.color = Math.random() > 0.4 ? 'rgba(232, 197, 200, 0.75)' : 'rgba(223, 186, 115, 0.65)';
+        }
+        update() {
+          this.y += this.speedY;
+          this.x += this.speedX + Math.sin(this.y / 30) * 0.5;
+          this.rotation += this.rotSpeed;
+          if (this.y > height + 20) {
+            this.reset();
+            this.y = -10;
+          }
+        }
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate((this.rotation * Math.PI) / 180);
+          ctx.fillStyle = this.color;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, this.size, this.size * 0.55, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < PETAL_COUNT; i++) {
+        petals.push(new Petal());
+      }
+
+      function animatePetals() {
+        ctx.clearRect(0, 0, width, height);
+        petals.forEach(petal => {
+          petal.update();
+          petal.draw();
+        });
+        requestAnimationFrame(animatePetals);
+      }
+      animatePetals();
+
+      /* 3. 爱情倒计时逻辑 (可由婚礼流程中的主仪式时刻动态联动，默认 2026-09-28 18:00) */
+      let targetDate = new Date('2026-09-28T18:00:00+08:00').getTime();
+      const elDays = document.getElementById('cd-days');
+      const elHours = document.getElementById('cd-hours');
+      const elMinutes = document.getElementById('cd-minutes');
+      const elSeconds = document.getElementById('cd-seconds');
+      const elStatus = document.getElementById('cd-status-text');
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          elDays.textContent = '00';
+          elHours.textContent = '00';
+          elMinutes.textContent = '00';
+          elSeconds.textContent = '00';
+          elStatus.innerHTML = '🥂 <strong>仪式圆满礼成！感谢所有的祝福与陪伴</strong> 🥂';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        elDays.textContent = String(days).padStart(2, '0');
+        elHours.textContent = String(hours).padStart(2, '0');
+        elMinutes.textContent = String(minutes).padStart(2, '0');
+        elSeconds.textContent = String(seconds).padStart(2, '0');
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* 4. 封面图片自定义上传与 LocalStorage 记忆 */
+      const heroSection = document.getElementById('hero');
+      const coverUploader = document.getElementById('coverUploader');
+      const resetCoverBtn = document.getElementById('resetCoverBtn');
+
+      const DEFAULT_HERO_BG = 'url("https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80")';
+      
+      const savedCover = localStorage.getItem('wedding_custom_cover');
+      if (savedCover) {
+        heroSection.style.backgroundImage = `url("${savedCover}")`;
+        resetCoverBtn.style.display = 'inline-block';
+      } else {
+        heroSection.style.backgroundImage = DEFAULT_HERO_BG;
+      }
+
+      function compressImage(file, maxWidth, quality, callback) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            let w = img.width;
+            let h = img.height;
+            if (w > maxWidth) {
+              h = (maxWidth / w) * h;
+              w = maxWidth;
+            }
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, w, h);
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            callback(dataUrl);
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      coverUploader.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        compressImage(file, 1080, 0.75, (base64Url) => {
+          try {
+            localStorage.setItem('wedding_custom_cover', base64Url);
+            heroSection.style.backgroundImage = `url("${base64Url}")`;
+            resetCoverBtn.style.display = 'inline-block';
+            showToast('封面背景已更新');
+          } catch(err) {
+            showToast('存储空间已满，请选择更小图片');
+          }
+        });
+      });
+
+      resetCoverBtn.addEventListener('click', () => {
+        localStorage.removeItem('wedding_custom_cover');
+        heroSection.style.backgroundImage = DEFAULT_HERO_BG;
+        resetCoverBtn.style.display = 'none';
+        showToast('已恢复默认封面');
+      });
+
+      /* 4. 婚礼流程动态渲染与编辑管理 */
+      const defaultSchedule = Object.freeze([
+        { time: "16:30", title: "宾客签到 · 浪漫合影", desc: "迎宾签到台领取定制伴手礼，在花艺签名墙前合影留念" },
+        { time: "17:15", title: "迎宾酒会 · 悠扬乐队", desc: "享用精致迎宾甜品台与特调鸡尾酒，现场爵士轻音乐暖场" },
+        { time: "18:00", title: "神圣仪式 · 爱的誓言", desc: "新人入场、互换婚戒、真挚誓言倾诉与香槟塔盛典" },
+        { time: "18:38", title: "答谢晚宴 · 举杯同庆", desc: "水晶之恋宴会厅佳肴开席，共同举杯分享幸福喜悦" },
+        { time: "19:18", title: "敬酒互动 · 惊喜抽奖", desc: "新人向各席宾客敬酒致谢，趣味互动环节与神秘好礼相送" }
+      ]);
+
+      let scheduleList = null;
+      try {
+        const savedSchedule = localStorage.getItem('wedding_schedule_list');
+        scheduleList = savedSchedule !== null ? JSON.parse(savedSchedule) : null;
+      } catch (e) {
+        scheduleList = null;
+      }
+      if (!Array.isArray(scheduleList)) {
+        scheduleList = JSON.parse(JSON.stringify(defaultSchedule));
+      }
+
+      const scheduleContainer = document.getElementById('scheduleList');
+      const editScheduleBtn = document.getElementById('editScheduleBtn');
+      const resetScheduleBtn = document.getElementById('resetScheduleBtn');
+      const scheduleModal = document.getElementById('scheduleModal');
+      const scheduleEditorContainer = document.getElementById('scheduleEditorContainer');
+      const addScheduleItemBtn = document.getElementById('addScheduleItemBtn');
+      const closeScheduleModalBtn = document.getElementById('closeScheduleModalBtn');
+      const cancelScheduleBtn = document.getElementById('cancelScheduleBtn');
+      const saveScheduleBtn = document.getElementById('saveScheduleBtn');
+      const resetScheduleDefaultBtn = document.getElementById('resetScheduleDefaultBtn');
+
+      function checkScheduleResetVisibility() {
+        const isModified = localStorage.getItem('wedding_schedule_list') !== null;
+        if (resetScheduleBtn) {
+          resetScheduleBtn.style.display = isModified ? 'inline-block' : 'none';
+        }
+      }
+
+      function syncInfoWithSchedule() {
+        const textLineEl = document.getElementById('infoScheduleTextLine');
+        const heroDateBanner = document.querySelector('.wedding-date-banner');
+
+        if (!Array.isArray(scheduleList) || scheduleList.length === 0) {
+          if (textLineEl) {
+            textLineEl.innerHTML = '<span style="color:var(--text-muted);">暂未设置流程安排</span>';
+          }
+          return;
+        }
+
+        // 提取核心主题与时刻，与婚礼流程内容保持完全一致
+        const summaryItems = scheduleList.map(item => {
+          const time = item.time ? item.time.trim() : '';
+          const rawTitle = item.title ? item.title.trim() : '';
+          const coreTitle = rawTitle.includes('·') ? rawTitle.split('·')[0].trim() : rawTitle;
+          return { time, coreTitle };
+        }).filter(it => it.time || it.coreTitle);
+
+        // 同步概览文本（与婚礼流程内容时刻保持完全一致）
+        if (textLineEl) {
+          if (summaryItems.length > 0) {
+            const lineText = summaryItems
+              .map(it => `<span class="info-step-text"><strong>${escapeHTML(it.time)}</strong> ${escapeHTML(it.coreTitle)}</span>`)
+              .join(' <span class="info-step-sep">|</span> ');
+            textLineEl.innerHTML = lineText;
+          } else {
+            textLineEl.innerHTML = '<span style="color:var(--text-muted);">暂未设置流程安排</span>';
+          }
+        }
+
+        // 智能联动首屏婚礼时刻横幅与倒计时
+        const ceremonyItem = summaryItems.find(it => /仪式|典礼|誓言/.test(it.coreTitle)) || summaryItems[0];
+        if (ceremonyItem && ceremonyItem.time) {
+          if (heroDateBanner) {
+            heroDateBanner.textContent = `2026.09.28 周日 ${ceremonyItem.time}`;
+          }
+          const timeMatch = ceremonyItem.time.match(/(\d{1,2})[:：](\d{2})/);
+          if (timeMatch) {
+            const hours = timeMatch[1].padStart(2, '0');
+            const minutes = timeMatch[2];
+            const newTargetStr = `2026-09-28T${hours}:${minutes}:00+08:00`;
+            const parsedTarget = new Date(newTargetStr).getTime();
+            if (!isNaN(parsedTarget)) {
+              targetDate = parsedTarget;
+              if (typeof updateCountdown === 'function') {
+                updateCountdown();
+              }
+            }
+          }
+        }
+      }
+
+      function renderSchedule() {
+        if (!scheduleContainer) return;
+        scheduleContainer.innerHTML = '';
+        checkScheduleResetVisibility();
+
+        if (scheduleList.length === 0) {
+          scheduleContainer.innerHTML = `
+            <div style="text-align:center; padding:35px 20px; background:rgba(255,255,255,0.7); border-radius:var(--radius-md); border:1px dashed rgba(197, 160, 89, 0.4); margin: 20px 0;">
+              <p style="color:var(--text-muted); margin-bottom:12px; font-size:0.9rem;">暂无流程环节，点击下方按钮添加婚礼安排吧~</p>
+              <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+                <button type="button" class="btn-gold" id="emptyEditScheduleBtn" style="font-size:0.82rem; padding:6px 16px;">✏️ 添加流程环节</button>
+                <button type="button" class="btn-tiny-tool" id="emptyResetScheduleBtn" style="font-size:0.82rem; padding:6px 16px; color:#8E7135;">↺ 恢复默认流程</button>
+              </div>
+            </div>
+          `;
+          const emptyEdit = document.getElementById('emptyEditScheduleBtn');
+          const emptyReset = document.getElementById('emptyResetScheduleBtn');
+          if (emptyEdit) emptyEdit.addEventListener('click', openScheduleEditor);
+          if (emptyReset) emptyReset.addEventListener('click', restoreDefaultSchedule);
+          syncInfoWithSchedule();
+          return;
+        }
+
+        scheduleList.forEach((item) => {
+          const card = document.createElement('div');
+          card.className = 'schedule-card fade-up-element in-view';
+          card.innerHTML = `
+            <div class="schedule-time-box">
+              <div class="schedule-time">${escapeHTML(item.time)}</div>
+            </div>
+            <div class="schedule-content">
+              <h4>${escapeHTML(item.title)}</h4>
+              <p>${escapeHTML(item.desc)}</p>
+            </div>
+          `;
+          scheduleContainer.appendChild(card);
+        });
+
+        syncInfoWithSchedule();
+      }
+      renderSchedule();
+
+      function updateScheduleIndices() {
+        const badges = scheduleEditorContainer.querySelectorAll('.schedule-node-idx');
+        badges.forEach((b, i) => {
+          b.textContent = `第 ${i + 1} 幕`;
+        });
+      }
+
+      function openScheduleEditor() {
+        scheduleEditorContainer.innerHTML = '';
+        scheduleList.forEach((item, idx) => {
+          appendScheduleItemEditor(item.time, item.title, item.desc, idx);
+        });
+        scheduleModal.classList.add('active');
+      }
+
+      function appendScheduleItemEditor(time = '', title = '', desc = '', idx = 0) {
+        const card = document.createElement('div');
+        card.className = 'editor-item-card';
+        card.innerHTML = `
+          <div class="editor-item-header">
+            <span style="font-size:0.84rem; font-weight:600; color:var(--gold-dark); display:flex; align-items:center; gap:6px;">
+              <span>✨ 流程环节</span>
+              <span class="schedule-node-idx" style="background:var(--gold-light); color:#5d4615; padding:1px 7px; border-radius:10px; font-size:0.75rem;">第 ${idx + 1} 幕</span>
+            </span>
+            <div class="editor-item-actions">
+              <button type="button" class="btn-tiny-tool schedule-item-move-up" style="padding:2px 8px; font-size:0.75rem;" title="上移">↑</button>
+              <button type="button" class="btn-tiny-tool schedule-item-move-down" style="padding:2px 8px; font-size:0.75rem;" title="下移">↓</button>
+              <button type="button" class="editor-item-delete schedule-item-delete" title="删除该环节">🗑️ 删除</button>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:8px;">
+            <div style="flex:1;">
+              <label style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:3px;">时刻 / 时间</label>
+              <input type="text" class="form-input sched-input-time" value="${escapeHTML(time)}" placeholder="如 16:30" style="padding:6px 10px; font-size:0.85rem;">
+            </div>
+            <div style="flex:2;">
+              <label style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:3px;">环节主题</label>
+              <input type="text" class="form-input sched-input-title" value="${escapeHTML(title)}" placeholder="如 宾客签到 · 浪漫合影" style="padding:6px 10px; font-size:0.85rem;">
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:3px;">环节内容与亮点描述</label>
+            <textarea class="form-textarea sched-input-desc" rows="2" placeholder="写下该环节的简要安排..." style="padding:6px 10px; font-size:0.85rem;">${escapeHTML(desc)}</textarea>
+          </div>
+        `;
+
+        card.querySelector('.schedule-item-delete').addEventListener('click', () => {
+          card.remove();
+          updateScheduleIndices();
+        });
+
+        card.querySelector('.schedule-item-move-up').addEventListener('click', () => {
+          const prev = card.previousElementSibling;
+          if (prev) {
+            scheduleEditorContainer.insertBefore(card, prev);
+            updateScheduleIndices();
+          }
+        });
+
+        card.querySelector('.schedule-item-move-down').addEventListener('click', () => {
+          const next = card.nextElementSibling;
+          if (next) {
+            scheduleEditorContainer.insertBefore(next, card);
+            updateScheduleIndices();
+          }
+        });
+
+        scheduleEditorContainer.appendChild(card);
+        updateScheduleIndices();
+      }
+
+      if (editScheduleBtn) editScheduleBtn.addEventListener('click', openScheduleEditor);
+      if (closeScheduleModalBtn) closeScheduleModalBtn.addEventListener('click', () => scheduleModal.classList.remove('active'));
+      if (cancelScheduleBtn) cancelScheduleBtn.addEventListener('click', () => scheduleModal.classList.remove('active'));
+      if (scheduleModal) {
+        scheduleModal.addEventListener('click', (e) => {
+          if (e.target === scheduleModal) scheduleModal.classList.remove('active');
+        });
+      }
+      if (addScheduleItemBtn) {
+        addScheduleItemBtn.addEventListener('click', () => {
+          const count = scheduleEditorContainer.querySelectorAll('.editor-item-card').length;
+          appendScheduleItemEditor('', '', '', count);
+          scheduleEditorContainer.scrollTop = scheduleEditorContainer.scrollHeight;
+        });
+      }
+      if (saveScheduleBtn) {
+        saveScheduleBtn.addEventListener('click', () => {
+          const editorCards = scheduleEditorContainer.querySelectorAll('.editor-item-card');
+          const newSchedule = [];
+          editorCards.forEach(card => {
+            const time = card.querySelector('.sched-input-time').value.trim();
+            const title = card.querySelector('.sched-input-title').value.trim();
+            const desc = card.querySelector('.sched-input-desc').value.trim();
+            if (time || title || desc) {
+              newSchedule.push({ time, title, desc });
+            }
+          });
+
+          scheduleList = newSchedule;
+          localStorage.setItem('wedding_schedule_list', JSON.stringify(scheduleList));
+          renderSchedule();
+          scheduleModal.classList.remove('active');
+          showToast('婚礼流程已更新并保存');
+        });
+      }
+
+      function restoreDefaultSchedule() {
+        scheduleList = JSON.parse(JSON.stringify(defaultSchedule));
+        localStorage.removeItem('wedding_schedule_list');
+        renderSchedule();
+        if (scheduleModal) scheduleModal.classList.remove('active');
+        showToast('已恢复默认婚礼流程');
+      }
+
+      if (resetScheduleBtn) resetScheduleBtn.addEventListener('click', restoreDefaultSchedule);
+      if (resetScheduleDefaultBtn) resetScheduleDefaultBtn.addEventListener('click', restoreDefaultSchedule);
+
+      /* 5. 婚纱相册相片渲染、批量上传、单张删除、相册清空与全屏灯箱 */
+      const defaultPhotos = Object.freeze([
+        "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&auto=format&fit=crop&q=80"
+      ]);
+
+      let galleryPhotos = null;
+      try {
+        const savedPhotos = localStorage.getItem('wedding_gallery_photos');
+        galleryPhotos = savedPhotos !== null ? JSON.parse(savedPhotos) : null;
+      } catch (e) {
+        galleryPhotos = null;
+      }
+      if (!Array.isArray(galleryPhotos)) {
+        galleryPhotos = [...defaultPhotos];
+      }
+
+      const galleryGrid = document.getElementById('galleryGrid');
+      const galleryUploader = document.getElementById('galleryUploader');
+      const resetGalleryBtn = document.getElementById('resetGalleryBtn');
+      const clearGalleryBtn = document.getElementById('clearGalleryBtn');
+      const lightboxDelBtn = document.getElementById('lightboxDelBtn');
+
+      function checkGalleryResetVisibility() {
+        const isModified = localStorage.getItem('wedding_gallery_photos') !== null;
+        if (resetGalleryBtn) {
+          resetGalleryBtn.style.display = isModified ? 'inline-block' : 'none';
+        }
+        if (clearGalleryBtn) {
+          clearGalleryBtn.style.display = galleryPhotos.length > 0 ? 'inline-block' : 'none';
+        }
+      }
+
+      function deletePhotoByIndex(deleteIdx) {
+        if (deleteIdx >= 0 && deleteIdx < galleryPhotos.length) {
+          galleryPhotos.splice(deleteIdx, 1);
+          localStorage.setItem('wedding_gallery_photos', JSON.stringify(galleryPhotos));
+          renderGallery();
+          showToast('已删除照片');
+        }
+      }
+
+      function restoreDefaultPhotos() {
+        galleryPhotos = [...defaultPhotos];
+        localStorage.removeItem('wedding_gallery_photos');
+        renderGallery();
+        showToast('已恢复默认照片');
+      }
+
+      function renderGallery() {
+        galleryGrid.innerHTML = '';
+        checkGalleryResetVisibility();
+
+        if (galleryPhotos.length === 0) {
+          galleryGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px 15px; background: rgba(255,255,255,0.7); border-radius: var(--radius-md); border: 1px dashed rgba(197, 160, 89, 0.4);">
+              <p style="color: var(--text-muted); margin-bottom: 12px; font-size: 0.9rem;">相册当前暂无照片</p>
+              <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+                <label class="btn-gold" for="galleryUploader" style="font-size:0.82rem; padding:6px 16px; cursor:pointer;">➕ 上传专属婚纱照</label>
+                <button type="button" class="btn-tiny-tool" id="emptyResetGalleryBtn" style="font-size:0.82rem; padding:6px 16px; color:#8E7135;">↺ 恢复默认照片</button>
+              </div>
+            </div>
+          `;
+          const emptyResetGalleryBtn = document.getElementById('emptyResetGalleryBtn');
+          if (emptyResetGalleryBtn) emptyResetGalleryBtn.addEventListener('click', restoreDefaultPhotos);
+          return;
+        }
+
+        galleryPhotos.forEach((src, idx) => {
+          const item = document.createElement('div');
+          item.className = 'gallery-item';
+          item.innerHTML = `
+            <img src="${src}" loading="lazy" alt="婚纱照 ${idx + 1}" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22><rect fill=%22%23E8C5C8%22 width=%22100%%22 height=%22100%%22/><text fill=%22%23FFF%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22>Wedding Memory</text></svg>'">
+            <div class="gallery-item-delete" data-idx="${idx}" title="删除此照片">&times;</div>
+          `;
+          item.addEventListener('click', (e) => {
+            if (e.target.classList.contains('gallery-item-delete')) {
+              e.stopPropagation();
+              const deleteIdx = parseInt(e.target.dataset.idx, 10);
+              deletePhotoByIndex(deleteIdx);
+              return;
+            }
+            openLightbox(idx);
+          });
+          galleryGrid.appendChild(item);
+        });
+      }
+      renderGallery();
+
+      if (resetGalleryBtn) {
+        resetGalleryBtn.addEventListener('click', restoreDefaultPhotos);
+      }
+
+      if (clearGalleryBtn) {
+        clearGalleryBtn.addEventListener('click', () => {
+          if (confirm('确定要清空相册的所有照片吗？（清空后可随时点击「恢复默认照片」一键还原）')) {
+            galleryPhotos = [];
+            localStorage.setItem('wedding_gallery_photos', JSON.stringify([]));
+            renderGallery();
+            showToast('已清空相册，可随时点击恢复默认');
+          }
+        });
+      }
+
+      galleryUploader.addEventListener('change', (e) => {
+        const files = Array.from(e.target.files);
+        if (!files.length) return;
+
+        let processed = 0;
+        files.forEach(file => {
+          compressImage(file, 800, 0.7, (base64) => {
+            galleryPhotos.push(base64);
+            processed++;
+            if (processed === files.length) {
+              try {
+                localStorage.setItem('wedding_gallery_photos', JSON.stringify(galleryPhotos));
+                renderGallery();
+                showToast(`成功添加 ${processed} 张照片`);
+              } catch(err) {
+                showToast('存储超限，部分图片可能未能完全保存');
+              }
+            }
+          });
+        });
+      });
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+      let currentLightboxIdx = 0;
+
+      function openLightbox(idx) {
+        currentLightboxIdx = idx;
+        updateLightboxView();
+        lightbox.classList.add('active');
+      }
+
+      function updateLightboxView() {
+        if (galleryPhotos.length === 0) {
+          lightbox.classList.remove('active');
+          return;
+        }
+        lightboxImg.src = galleryPhotos[currentLightboxIdx];
+        lightboxCounter.textContent = `${currentLightboxIdx + 1} / ${galleryPhotos.length}`;
+      }
+
+      if (lightboxDelBtn) {
+        lightboxDelBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (galleryPhotos.length === 0) return;
+          const currentIdx = currentLightboxIdx;
+          galleryPhotos.splice(currentIdx, 1);
+          localStorage.setItem('wedding_gallery_photos', JSON.stringify(galleryPhotos));
+          renderGallery();
+          showToast('已删除此张照片');
+
+          if (galleryPhotos.length === 0) {
+            lightbox.classList.remove('active');
+          } else {
+            currentLightboxIdx = currentLightboxIdx % galleryPhotos.length;
+            updateLightboxView();
+          }
+        });
+      }
+
+      lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+      });
+
+      lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (galleryPhotos.length === 0) return;
+        currentLightboxIdx = (currentLightboxIdx - 1 + galleryPhotos.length) % galleryPhotos.length;
+        updateLightboxView();
+      });
+
+      lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (galleryPhotos.length === 0) return;
+        currentLightboxIdx = (currentLightboxIdx + 1) % galleryPhotos.length;
+        updateLightboxView();
+      });
+
+      let touchStartX = 0;
+      let touchEndX = 0;
+      lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          currentLightboxIdx = (currentLightboxIdx + 1) % galleryPhotos.length;
+          updateLightboxView();
+        } else if (touchEndX - touchStartX > 50) {
+          currentLightboxIdx = (currentLightboxIdx - 1 + galleryPhotos.length) % galleryPhotos.length;
+          updateLightboxView();
+        }
+      }, { passive: true });
+
+      /* 6. 一键导航与地址复制 */
+      const openNavSheetBtn = document.getElementById('openNavSheetBtn');
+      const closeNavSheetBtn = document.getElementById('closeNavSheetBtn');
+      const navModal = document.getElementById('navModal');
+      const copyAddrBtn = document.getElementById('copyAddrBtn');
+      const HOTEL_ADDRESS = '安徽省六安市舒城县南聚金陵大酒店 (水晶之恋)';
+
+      openNavSheetBtn.addEventListener('click', () => navModal.classList.add('active'));
+      closeNavSheetBtn.addEventListener('click', () => navModal.classList.remove('active'));
+      navModal.addEventListener('click', (e) => {
+        if (e.target === navModal) navModal.classList.remove('active');
+      });
+
+      copyAddrBtn.addEventListener('click', () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(HOTEL_ADDRESS).then(() => {
+            showToast('已复制详细地址到剪贴板');
+            navModal.classList.remove('active');
+          }).catch(() => fallbackCopy(HOTEL_ADDRESS));
+        } else {
+          fallbackCopy(HOTEL_ADDRESS);
+        }
+      });
+
+      function fallbackCopy(text) {
+        const input = document.createElement('input');
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        showToast('已复制详细地址到剪贴板');
+        navModal.classList.remove('active');
+      }
+
+      /* 7. 出席回执提交、校验与祝福墙联动 */
+      const rsvpForm = document.getElementById('rsvpForm');
+      const guestbookList = document.getElementById('guestbookList');
+
+      const defaultWishes = [
+        { author: '周梦琪', time: '10分钟前', text: '最美的新娘向可微，恭喜你们修成正果！祝永远幸福浪漫！', likes: 18 },
+        { author: '李承泽', time: '1小时前', text: '祝杜兄新婚大吉！执子之手，与子偕老，期待婚礼见！', likes: 24 },
+        { author: '张子涵 & 顾欣', time: '2小时前', text: '天作之合，琴瑟和鸣！祝两位新人早生贵子，百年好合！', likes: 32 }
+      ];
+
+      let wishesData = JSON.parse(localStorage.getItem('wedding_wishes') || 'null') || defaultWishes;
+
+      function renderGuestbook() {
+        guestbookList.innerHTML = '';
+        wishesData.forEach((w, i) => {
+          const card = document.createElement('div');
+          card.className = 'guestbook-item';
+          card.innerHTML = `
+            <div class="guestbook-meta">
+              <span class="guestbook-author">${escapeHTML(w.author)}</span>
+              <span class="guestbook-time">${w.time}</span>
+            </div>
+            <p class="guestbook-content">${escapeHTML(w.text)}</p>
+            <div class="guestbook-like" data-idx="${i}">
+              <span>❤</span> 点赞 (${w.likes || 0})
+            </div>
+          `;
+          card.querySelector('.guestbook-like').addEventListener('click', () => {
+            wishesData[i].likes = (wishesData[i].likes || 0) + 1;
+            localStorage.setItem('wedding_wishes', JSON.stringify(wishesData));
+            renderGuestbook();
+          });
+          guestbookList.appendChild(card);
+        });
+      }
+      renderGuestbook();
+
+      /* 7. 出席回执高级配置、编辑修改与数据管理系统 */
+      const defaultRsvpConfig = Object.freeze({
+        tipText: "✨ 诚邀各位亲友于2026年9月20日前确认出席，便于我们为您提前安排专属席位",
+        opt1: "1人出席",
+        opt2: "2人出席",
+        opt3: "携家眷(3人+)",
+        opt4: "遗憾无法到场",
+        submitText: "💌 确认提交出席回执"
+      });
+
+      let rsvpConfig = null;
+      try {
+        const savedCfg = localStorage.getItem('wedding_rsvp_config');
+        rsvpConfig = savedCfg !== null ? JSON.parse(savedCfg) : null;
+      } catch (e) {
+        rsvpConfig = null;
+      }
+      if (!rsvpConfig || typeof rsvpConfig !== 'object') {
+        rsvpConfig = { ...defaultRsvpConfig };
+      }
+
+      const rsvpTipText = document.getElementById('rsvpTipText');
+      const labelAtt1 = document.getElementById('labelAtt1');
+      const labelAtt2 = document.getElementById('labelAtt2');
+      const labelAtt3 = document.getElementById('labelAtt3');
+      const labelAtt4 = document.getElementById('labelAtt4');
+      const rsvpSubmitBtn = document.getElementById('rsvpSubmitBtn');
+      const editRsvpConfigBtn = document.getElementById('editRsvpConfigBtn');
+      const resetRsvpConfigBtn = document.getElementById('resetRsvpConfigBtn');
+      const viewRsvpRecordsBtn = document.getElementById('viewRsvpRecordsBtn');
+      const rsvpSubmittedNotice = document.getElementById('rsvpSubmittedNotice');
+      const editMyRsvpBtn = document.getElementById('editMyRsvpBtn');
+
+      const rsvpConfigModal = document.getElementById('rsvpConfigModal');
+      const closeRsvpConfigModalBtn = document.getElementById('closeRsvpConfigModalBtn');
+      const cancelRsvpConfigBtn = document.getElementById('cancelRsvpConfigBtn');
+      const saveRsvpConfigBtn = document.getElementById('saveRsvpConfigBtn');
+      const resetRsvpConfigDefaultBtn = document.getElementById('resetRsvpConfigDefaultBtn');
+
+      const cfgRsvpTip = document.getElementById('cfgRsvpTip');
+      const cfgOpt1 = document.getElementById('cfgOpt1');
+      const cfgOpt2 = document.getElementById('cfgOpt2');
+      const cfgOpt3 = document.getElementById('cfgOpt3');
+      const cfgOpt4 = document.getElementById('cfgOpt4');
+      const cfgSubmitBtn = document.getElementById('cfgSubmitBtn');
+
+      const rsvpRecordsModal = document.getElementById('rsvpRecordsModal');
+      const closeRsvpRecordsModalBtn = document.getElementById('closeRsvpRecordsModalBtn');
+      const doneRsvpRecordsBtn = document.getElementById('doneRsvpRecordsBtn');
+      const clearRsvpRecordsBtn = document.getElementById('clearRsvpRecordsBtn');
+      const copyRsvpRecordsBtn = document.getElementById('copyRsvpRecordsBtn');
+      const rsvpRecordsList = document.getElementById('rsvpRecordsList');
+      const statTotalCount = document.getElementById('statTotalCount');
+      const statAttendCount = document.getElementById('statAttendCount');
+      const statRegretCount = document.getElementById('statRegretCount');
+
+      let isEditingExistingRsvp = false;
+
+      function checkRsvpConfigResetVisibility() {
+        const isModified = localStorage.getItem('wedding_rsvp_config') !== null;
+        if (resetRsvpConfigBtn) {
+          resetRsvpConfigBtn.style.display = isModified ? 'inline-block' : 'none';
+        }
+      }
+
+      function renderRsvpConfig() {
+        if (rsvpTipText) rsvpTipText.textContent = rsvpConfig.tipText || defaultRsvpConfig.tipText;
+        if (labelAtt1) labelAtt1.textContent = rsvpConfig.opt1 || defaultRsvpConfig.opt1;
+        if (labelAtt2) labelAtt2.textContent = rsvpConfig.opt2 || defaultRsvpConfig.opt2;
+        if (labelAtt3) labelAtt3.textContent = rsvpConfig.opt3 || defaultRsvpConfig.opt3;
+        if (labelAtt4) labelAtt4.textContent = rsvpConfig.opt4 || defaultRsvpConfig.opt4;
+
+        document.getElementById('att1').value = rsvpConfig.opt1 || defaultRsvpConfig.opt1;
+        document.getElementById('att2').value = rsvpConfig.opt2 || defaultRsvpConfig.opt2;
+        document.getElementById('att3').value = rsvpConfig.opt3 || defaultRsvpConfig.opt3;
+        document.getElementById('att0').value = rsvpConfig.opt4 || defaultRsvpConfig.opt4;
+
+        if (rsvpSubmitBtn && !isEditingExistingRsvp) {
+          rsvpSubmitBtn.textContent = rsvpConfig.submitText || defaultRsvpConfig.submitText;
+        }
+        checkRsvpConfigResetVisibility();
+      }
+      renderRsvpConfig();
+
+      function openRsvpConfigModal() {
+        cfgRsvpTip.value = rsvpConfig.tipText || '';
+        cfgOpt1.value = rsvpConfig.opt1 || '';
+        cfgOpt2.value = rsvpConfig.opt2 || '';
+        cfgOpt3.value = rsvpConfig.opt3 || '';
+        cfgOpt4.value = rsvpConfig.opt4 || '';
+        cfgSubmitBtn.value = rsvpConfig.submitText || '';
+        rsvpConfigModal.classList.add('active');
+      }
+
+      if (editRsvpConfigBtn) editRsvpConfigBtn.addEventListener('click', openRsvpConfigModal);
+      if (closeRsvpConfigModalBtn) closeRsvpConfigModalBtn.addEventListener('click', () => rsvpConfigModal.classList.remove('active'));
+      if (cancelRsvpConfigBtn) cancelRsvpConfigBtn.addEventListener('click', () => rsvpConfigModal.classList.remove('active'));
+      if (rsvpConfigModal) {
+        rsvpConfigModal.addEventListener('click', (e) => {
+          if (e.target === rsvpConfigModal) rsvpConfigModal.classList.remove('active');
+        });
+      }
+
+      if (saveRsvpConfigBtn) {
+        saveRsvpConfigBtn.addEventListener('click', () => {
+          rsvpConfig = {
+            tipText: cfgRsvpTip.value.trim() || defaultRsvpConfig.tipText,
+            opt1: cfgOpt1.value.trim() || defaultRsvpConfig.opt1,
+            opt2: cfgOpt2.value.trim() || defaultRsvpConfig.opt2,
+            opt3: cfgOpt3.value.trim() || defaultRsvpConfig.opt3,
+            opt4: cfgOpt4.value.trim() || defaultRsvpConfig.opt4,
+            submitText: cfgSubmitBtn.value.trim() || defaultRsvpConfig.submitText
+          };
+          localStorage.setItem('wedding_rsvp_config', JSON.stringify(rsvpConfig));
+          renderRsvpConfig();
+          rsvpConfigModal.classList.remove('active');
+          showToast('回执设置与文案已保存');
+        });
+      }
+
+      function restoreDefaultRsvpConfig() {
+        rsvpConfig = { ...defaultRsvpConfig };
+        localStorage.removeItem('wedding_rsvp_config');
+        renderRsvpConfig();
+        if (rsvpConfigModal) rsvpConfigModal.classList.remove('active');
+        showToast('已恢复默认回执设置');
+      }
+
+      if (resetRsvpConfigBtn) resetRsvpConfigBtn.addEventListener('click', restoreDefaultRsvpConfig);
+      if (resetRsvpConfigDefaultBtn) resetRsvpConfigDefaultBtn.addEventListener('click', restoreDefaultRsvpConfig);
+
+      /* 宾客已提交回执状态检查与回显编辑 */
+      function checkMyRsvp() {
+        let myRecord = null;
+        try {
+          myRecord = JSON.parse(localStorage.getItem('wedding_my_rsvp') || 'null');
+        } catch (e) {
+          myRecord = null;
+        }
+
+        if (myRecord && myRecord.name) {
+          isEditingExistingRsvp = true;
+          if (rsvpSubmittedNotice) {
+            rsvpSubmittedNotice.style.display = 'flex';
+            rsvpSubmittedNotice.querySelector('span').textContent = `✅ 您已提交回执（${escapeHTML(myRecord.name)} · ${escapeHTML(myRecord.count)}）`;
+          }
+          if (rsvpSubmitBtn) {
+            rsvpSubmitBtn.textContent = '💾 保存并更新我的回执';
+          }
+        } else {
+          isEditingExistingRsvp = false;
+          if (rsvpSubmittedNotice) rsvpSubmittedNotice.style.display = 'none';
+          if (rsvpSubmitBtn) {
+            rsvpSubmitBtn.textContent = rsvpConfig.submitText || defaultRsvpConfig.submitText;
+          }
+        }
+      }
+      checkMyRsvp();
+
+      function fillFormWithMyRsvp() {
+        let myRecord = null;
+        try {
+          myRecord = JSON.parse(localStorage.getItem('wedding_my_rsvp') || 'null');
+        } catch (e) {
+          myRecord = null;
+        }
+        if (!myRecord) return;
+
+        document.getElementById('guestName').value = myRecord.name || '';
+        document.getElementById('guestPhone').value = myRecord.phone || '';
+        document.getElementById('guestWish').value = myRecord.wish || '';
+
+        const radios = document.querySelectorAll('input[name="attendCount"]');
+        radios.forEach(r => {
+          if (r.value === myRecord.count) r.checked = true;
+        });
+
+        rsvpForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        showToast('已载入您之前提交的回执信息，可在表单中直接修改');
+      }
+
+      if (editMyRsvpBtn) editMyRsvpBtn.addEventListener('click', fillFormWithMyRsvp);
+
+      /* 回执提交与记录保存 */
+      rsvpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('guestName').value.trim();
+        const phone = document.getElementById('guestPhone').value.trim();
+        const count = document.querySelector('input[name="attendCount"]:checked').value;
+        const wish = document.getElementById('guestWish').value.trim();
+
+        if (!/^1[3-9]\d{9}$/.test(phone)) {
+          showToast('请输入正确的 11 位手机号码');
+          return;
+        }
+
+        const rsvpRecord = { name, phone, count, wish, submitTime: new Date().toLocaleString() };
+        localStorage.setItem('wedding_my_rsvp', JSON.stringify(rsvpRecord));
+
+        // 同步存入所有回执记录列表
+        let allRecords = [];
+        try {
+          allRecords = JSON.parse(localStorage.getItem('wedding_rsvp_records') || '[]');
+        } catch (err) {
+          allRecords = [];
+        }
+        const existingIdx = allRecords.findIndex(r => r.phone === phone || r.name === name);
+        if (existingIdx >= 0) {
+          allRecords[existingIdx] = rsvpRecord;
+        } else {
+          allRecords.unshift(rsvpRecord);
+        }
+        localStorage.setItem('wedding_rsvp_records', JSON.stringify(allRecords));
+
+        if (wish) {
+          wishesData.unshift({
+            author: name,
+            time: '刚刚',
+            text: wish,
+            likes: 1
+          });
+          localStorage.setItem('wedding_wishes', JSON.stringify(wishesData));
+          renderGuestbook();
+        }
+
+        checkMyRsvp();
+        showToast(isEditingExistingRsvp ? '💌 回执已更新！期待与您相聚舒城' : '💌 回执提交成功！期待与您相聚舒城');
+      });
+
+      /* 回执名单查看模态框交互与复制导出 */
+      function renderRsvpRecordsModal() {
+        let records = [];
+        try {
+          records = JSON.parse(localStorage.getItem('wedding_rsvp_records') || '[]');
+        } catch (e) {
+          records = [];
+        }
+
+        statTotalCount.textContent = records.length;
+        let totalAttendPeople = 0;
+        let regretCount = 0;
+
+        records.forEach(r => {
+          if (r.count.includes('1人')) totalAttendPeople += 1;
+          else if (r.count.includes('2人')) totalAttendPeople += 2;
+          else if (r.count.includes('3人') || r.count.includes('家眷')) totalAttendPeople += 3;
+          else if (r.count.includes('遗憾') || r.count.includes('无法')) regretCount += 1;
+          else totalAttendPeople += 1;
+        });
+
+        statAttendCount.textContent = totalAttendPeople;
+        statRegretCount.textContent = regretCount;
+
+        rsvpRecordsList.innerHTML = '';
+        if (records.length === 0) {
+          rsvpRecordsList.innerHTML = '<div style="text-align:center; padding:30px; color:var(--text-muted); font-size:0.85rem;">暂无已提交的宾客回执</div>';
+          return;
+        }
+
+        records.forEach((r, i) => {
+          const item = document.createElement('div');
+          item.style.cssText = 'background:var(--bg-ivory); border:1px solid rgba(197,160,89,0.25); border-radius:var(--radius-sm); padding:10px 12px; font-size:0.85rem;';
+          item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <span style="font-weight:600; color:var(--text-main); font-size:0.92rem;">${escapeHTML(r.name)} <span style="font-size:0.75rem; color:var(--gold-dark); background:var(--gold-light); padding:1px 6px; border-radius:8px; margin-left:4px;">${escapeHTML(r.count)}</span></span>
+              <span style="font-size:0.75rem; color:var(--text-muted);">${r.submitTime || ''}</span>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:4px;">📞 ${escapeHTML(r.phone)}</div>
+            ${r.wish ? `<div style="font-size:0.8rem; color:var(--text-secondary); background:rgba(255,255,255,0.8); padding:4px 8px; border-radius:4px; border-left:2px solid var(--gold-primary);">“${escapeHTML(r.wish)}”</div>` : ''}
+          `;
+          rsvpRecordsList.appendChild(item);
+        });
+      }
+
+      if (viewRsvpRecordsBtn) {
+        viewRsvpRecordsBtn.addEventListener('click', () => {
+          renderRsvpRecordsModal();
+          rsvpRecordsModal.classList.add('active');
+        });
+      }
+
+      if (closeRsvpRecordsModalBtn) closeRsvpRecordsModalBtn.addEventListener('click', () => rsvpRecordsModal.classList.remove('active'));
+      if (doneRsvpRecordsBtn) doneRsvpRecordsBtn.addEventListener('click', () => rsvpRecordsModal.classList.remove('active'));
+      if (rsvpRecordsModal) {
+        rsvpRecordsModal.addEventListener('click', (e) => {
+          if (e.target === rsvpRecordsModal) rsvpRecordsModal.classList.remove('active');
+        });
+      }
+
+      if (clearRsvpRecordsBtn) {
+        clearRsvpRecordsBtn.addEventListener('click', () => {
+          if (confirm('确定要清空所有已收集的宾客回执数据吗？')) {
+            localStorage.removeItem('wedding_rsvp_records');
+            renderRsvpRecordsModal();
+            showToast('回执记录已清空');
+          }
+        });
+      }
+
+      if (copyRsvpRecordsBtn) {
+        copyRsvpRecordsBtn.addEventListener('click', () => {
+          let records = [];
+          try {
+            records = JSON.parse(localStorage.getItem('wedding_rsvp_records') || '[]');
+          } catch (e) {
+            records = [];
+          }
+          if (records.length === 0) {
+            showToast('暂无数据可复制');
+            return;
+          }
+          let text = "序号\t姓名\t电话\t出席人数\t祝福语\t提交时间\n";
+          records.forEach((r, idx) => {
+            text += `${idx + 1}\t${r.name}\t${r.phone}\t${r.count}\t${r.wish || ''}\t${r.submitTime || ''}\n`;
+          });
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast('已复制全部回执表格数据至剪贴板');
+        });
+      }
+
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+      }
+
+      /* 8. 右侧悬浮点状导航高亮 & 滚动监听 (IntersectionObserver) */
+      const navDots = document.querySelectorAll('.nav-dot');
+      const sections = document.querySelectorAll('header, section, footer');
+
+      navDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const targetId = dot.dataset.target;
+          const el = document.getElementById(targetId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.id;
+            navDots.forEach(dot => {
+              if (dot.dataset.target === currentId) {
+                dot.classList.add('active');
+              } else {
+                dot.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.35 });
+
+      sections.forEach(sec => sectionObserver.observe(sec));
+
+      /* 9. 元素进入视口渐入动画 (Fade-Up) */
+      const fadeElements = document.querySelectorAll('.fade-up-element');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      fadeElements.forEach(el => fadeObserver.observe(el));
+
+      /* 10. 微信分享优化：分享配置、OG 同步、微信 JSBridge 自定义分享、底部分享栏与设置 */
+      // ===== 分享卡片统一配置（修改此处即可全局生效，也可在页面底部「自定义分享卡片」中可视化修改） =====
+      const DEFAULT_SHARE_CONFIG = {
+        title: '杜冠云 & 向可微 的婚礼邀请函 | 我们结婚啦',
+        desc: '2026.09.28 周日 18:00 · 舒城县南聚金陵大酒店 水晶之恋。诚邀您与我们共同见证幸福时刻！',
+        image: 'https://CloudDu86.github.io/wedding-invitation/share-cover.jpg' // 封面图：可替换为你的线上图片绝对地址
+      };
+
+      let shareConfig = { ...DEFAULT_SHARE_CONFIG };
+      try {
+        const savedShare = localStorage.getItem('wedding_share_config');
+        if (savedShare) shareConfig = { ...shareConfig, ...JSON.parse(savedShare) };
+      } catch (e) { /* ignore */ }
+
+      const shareWxBtn = document.getElementById('shareWxBtn');
+      const shareMask = document.getElementById('shareMask');
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      const shareBar = document.getElementById('shareBar');
+      const shareSheet = document.getElementById('shareSheet');
+      const closeShareSheetBtn = document.getElementById('closeShareSheetBtn');
+      const copyShareLinkBtn = document.getElementById('copyShareLinkBtn');
+      const showShareGuideBtn = document.getElementById('showShareGuideBtn');
+
+      function isWeChat() {
+        return /MicroMessenger/i.test(navigator.userAgent);
+      }
+
+      function shareImageAbs() {
+        try { return new URL(shareConfig.image, location.href).href; }
+        catch (e) { return shareConfig.image; }
+      }
+
+      function shareLink() {
+        return location.href.split('#')[0];
+      }
+
+      // 将统一配置同步回 <head> 中的 OG / Twitter / description 标签
+      function syncShareMeta() {
+        document.title = shareConfig.title;
+        const setMeta = (selector, attr, val) => {
+          const el = document.querySelector(selector);
+          if (el) el.setAttribute(attr, val);
+        };
+        setMeta('meta[property="og:title"]', 'content', shareConfig.title);
+        setMeta('meta[property="og:description"]', 'content', shareConfig.desc);
+        setMeta('meta[property="og:image"]', 'content', shareConfig.image);
+        setMeta('meta[name="twitter:title"]', 'content', shareConfig.title);
+        setMeta('meta[name="twitter:description"]', 'content', shareConfig.desc);
+        setMeta('meta[name="twitter:image"]', 'content', shareConfig.image);
+        setMeta('meta[name="description"]', 'content', shareConfig.desc);
+      }
+      syncShareMeta();
+
+      // 打开微信分享引导蒙层（提示点击右上角「···」）
+      function openShareGuide() {
+        shareMask.classList.add('active');
+      }
+
+      // 微信内置浏览器：通过 WeixinJSBridge 尽力自定义分享卡片（无需服务端签名的兼容方案，
+      // 支持微信分享给好友与朋友圈文案；若后续接入公众号 JS-SDK 签名可在此基础上扩展 wx.config）
+      function bindWeChatShare() {
+        if (typeof WeixinJSBridge === 'undefined' || typeof WeixinJSBridge.on !== 'function') return;
+        const payload = () => ({
+          title: shareConfig.title,
+          desc: shareConfig.desc,
+          img_url: shareImageAbs(),
+          link: shareLink()
+        });
+        try {
+          WeixinJSBridge.on('menu:share:appmessage', () => WeixinJSBridge.invoke('shareAppMessage', payload()));
+          WeixinJSBridge.on('menu:share:timeline', () => WeixinJSBridge.invoke('shareTimeline', payload()));
+        } catch (e) { /* ignore */ }
+      }
+      if (typeof WeixinJSBridge !== 'undefined') bindWeChatShare();
+      document.addEventListener('WeixinJSBridgeReady', bindWeChatShare, false);
+
+      function copyText(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise((resolve, reject) => {
+          const input = document.createElement('textarea');
+          input.value = text;
+          input.style.position = 'fixed';
+          input.style.opacity = '0';
+          document.body.appendChild(input);
+          input.select();
+          try {
+            document.execCommand('copy') ? resolve() : reject();
+          } catch (err) {
+            reject(err);
+          }
+          document.body.removeChild(input);
+        });
+      }
+
+      // 底部常驻分享栏：微信内 → 右上角引导蒙层；触屏且支持 Web Share → 系统分享面板；其他 → 复制链接弹层
+      const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      shareBar.addEventListener('click', () => {
+        if (isWeChat()) {
+          openShareGuide();
+          return;
+        }
+        if (navigator.share && isTouchDevice) {
+          navigator.share({ title: shareConfig.title, text: shareConfig.desc, url: shareLink() }).catch(() => {});
+          return;
+        }
+        shareSheet.classList.add('active');
+      });
+
+      shareWxBtn.addEventListener('click', openShareGuide);
+      shareMask.addEventListener('click', () => shareMask.classList.remove('active'));
+
+      if (closeShareSheetBtn) closeShareSheetBtn.addEventListener('click', () => shareSheet.classList.remove('active'));
+      shareSheet.addEventListener('click', (e) => {
+        if (e.target === shareSheet) shareSheet.classList.remove('active');
+      });
+      if (showShareGuideBtn) {
+        showShareGuideBtn.addEventListener('click', () => {
+          shareSheet.classList.remove('active');
+          openShareGuide();
+        });
+      }
+      if (copyShareLinkBtn) {
+        copyShareLinkBtn.addEventListener('click', () => {
+          copyText(shareLink()).then(() => {
+            showToast('邀请链接已复制，粘贴发送给微信好友即可');
+            shareSheet.classList.remove('active');
+          }).catch(() => showToast('复制失败，请手动复制地址栏链接'));
+        });
+      }
+
+      /* 分享卡片设置模态框（标题 / 描述 / 封面图，保存后持久化并同步 OG 标签） */
+      const shareConfigModal = document.getElementById('shareConfigModal');
+      const openShareConfigBtn = document.getElementById('openShareConfigBtn');
+      const closeShareConfigBtn = document.getElementById('closeShareConfigBtn');
+      const cancelShareConfigBtn = document.getElementById('cancelShareConfigBtn');
+      const saveShareConfigBtn = document.getElementById('saveShareConfigBtn');
+      const resetShareConfigBtn = document.getElementById('resetShareConfigBtn');
+      const cfgShareTitle = document.getElementById('cfgShareTitle');
+      const cfgShareDesc = document.getElementById('cfgShareDesc');
+      const cfgShareImage = document.getElementById('cfgShareImage');
+
+      function openShareConfigModal() {
+        cfgShareTitle.value = shareConfig.title;
+        cfgShareDesc.value = shareConfig.desc;
+        cfgShareImage.value = shareConfig.image;
+        shareConfigModal.classList.add('active');
+      }
+
+      if (openShareConfigBtn) openShareConfigBtn.addEventListener('click', openShareConfigModal);
+      if (closeShareConfigBtn) closeShareConfigBtn.addEventListener('click', () => shareConfigModal.classList.remove('active'));
+      if (cancelShareConfigBtn) cancelShareConfigBtn.addEventListener('click', () => shareConfigModal.classList.remove('active'));
+      if (shareConfigModal) {
+        shareConfigModal.addEventListener('click', (e) => {
+          if (e.target === shareConfigModal) shareConfigModal.classList.remove('active');
+        });
+      }
+      if (saveShareConfigBtn) {
+        saveShareConfigBtn.addEventListener('click', () => {
+          shareConfig = {
+            title: cfgShareTitle.value.trim() || DEFAULT_SHARE_CONFIG.title,
+            desc: cfgShareDesc.value.trim() || DEFAULT_SHARE_CONFIG.desc,
+            image: cfgShareImage.value.trim() || DEFAULT_SHARE_CONFIG.image
+          };
+          localStorage.setItem('wedding_share_config', JSON.stringify(shareConfig));
+          syncShareMeta();
+          shareConfigModal.classList.remove('active');
+          showToast('分享标题、描述与封面已更新');
+        });
+      }
+      if (resetShareConfigBtn) {
+        resetShareConfigBtn.addEventListener('click', () => {
+          shareConfig = { ...DEFAULT_SHARE_CONFIG };
+          localStorage.removeItem('wedding_share_config');
+          syncShareMeta();
+          shareConfigModal.classList.remove('active');
+          showToast('已恢复默认分享设置');
+        });
+      }
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* 通用 Toast 工具 */
+      const toastBox = document.getElementById('toastBox');
+      let toastTimer = null;
+      function showToast(msg) {
+        clearTimeout(toastTimer);
+        toastBox.textContent = msg;
+        toastBox.classList.add('show');
+        toastTimer = setTimeout(() => {
+          toastBox.classList.remove('show');
+        }, 2500);
+      }
+    });
+  </script>
+</body>
+</html>
