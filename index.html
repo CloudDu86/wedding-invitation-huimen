@@ -957,11 +957,11 @@
   <!-- Canvas 花瓣粒子飘落动画 -->
   <canvas id="petal-canvas"></canvas>
 
-  <!-- 背景音乐音频 (默认关闭，用户点击右上角音乐按钮即可自主播放) -->
-  <audio id="bg-audio" loop preload="none" src="./assets/My_day_day_is_good_day_H.mp3"></audio>
+  <!-- 背景音乐音频 (默认轻柔自动播放，音量 35%) -->
+  <audio id="bg-audio" loop preload="auto" src="./assets/My_day_day_is_good_day_H.mp3"></audio>
 
-  <!-- 右上角音乐播放器悬浮控件 -->
-  <div class="music-ctrl" id="musicBtn" title="播放 / 暂停音乐">
+  <!-- 右上角音乐播放器悬浮控件 (默认呈现播放旋律状态) -->
+  <div class="music-ctrl playing" id="musicBtn" title="播放 / 暂停音乐">
     <div class="music-notes">♪</div>
     <svg viewBox="0 0 24 24">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/>
@@ -1202,10 +1202,13 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      /* 1. 音频播放控制（默认关闭，用户轻触右上角音乐图标可自主开启播放） */
+      /* 1. 音频播放控制（默认自动开启，轻柔音量 35%，支持微信环境与触屏平滑起播） */
       const audio = document.getElementById('bg-audio');
       const musicBtn = document.getElementById('musicBtn');
       let isAudioPlaying = false;
+
+      // 设置轻柔优雅的背景音量（默认 35%，舒适不突兀）
+      audio.volume = 0.35;
 
       function updateMusicUI(playing) {
         isAudioPlaying = playing;
@@ -1218,20 +1221,68 @@
 
       function togglePlayAudio() {
         if (audio.paused) {
+          audio.volume = 0.35;
           audio.play().then(() => {
             updateMusicUI(true);
-            localStorage.setItem('wedding_music_pref', 'play');
+            sessionStorage.setItem('wedding_music_paused_by_user', '0');
           }).catch(err => {
             console.log('Audio playback prevented:', err);
           });
         } else {
           audio.pause();
           updateMusicUI(false);
-          localStorage.setItem('wedding_music_pref', 'pause');
+          sessionStorage.setItem('wedding_music_paused_by_user', '1');
         }
       }
 
       musicBtn.addEventListener('click', togglePlayAudio);
+
+      // 微信内置浏览器：通过 WeixinJSBridge 专属通道无感自动起播
+      function autoPlayWeChat() {
+        const triggerPlay = () => {
+          if (sessionStorage.getItem('wedding_music_paused_by_user') === '1') return;
+          audio.volume = 0.35;
+          audio.play().then(() => updateMusicUI(true)).catch(() => {});
+        };
+
+        if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.invoke === 'function') {
+          WeixinJSBridge.invoke('getNetworkType', {}, triggerPlay);
+        } else {
+          document.addEventListener('WeixinJSBridgeReady', () => {
+            if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.invoke === 'function') {
+              WeixinJSBridge.invoke('getNetworkType', {}, triggerPlay);
+            } else {
+              triggerPlay();
+            }
+          }, false);
+        }
+      }
+      autoPlayWeChat();
+
+      // 普通浏览器尝试直接播放
+      const initialPlayPromise = audio.play();
+      if (initialPlayPromise !== undefined) {
+        initialPlayPromise.then(() => {
+          updateMusicUI(true);
+        }).catch(() => {
+          // 移动端 Safari / Chrome 限制无交互自动发声，待首次触碰解锁
+          updateMusicUI(false);
+        });
+      }
+
+      // 移动端浏览器首次触控/滚动平滑解锁播放
+      const unlockAudioOnTouch = () => {
+        if (sessionStorage.getItem('wedding_music_paused_by_user') !== '1' && audio.paused) {
+          audio.volume = 0.35;
+          audio.play().then(() => updateMusicUI(true)).catch(() => {});
+        }
+        ['touchstart', 'touchend', 'click', 'scroll'].forEach(evt => {
+          document.removeEventListener(evt, unlockAudioOnTouch);
+        });
+      };
+      ['touchstart', 'touchend', 'click', 'scroll'].forEach(evt => {
+        document.addEventListener(evt, unlockAudioOnTouch, { once: true, passive: true });
+      });
 
       /* 2. Canvas 花瓣粒子飘落动画系统 */
       const canvas = document.getElementById('petal-canvas');
