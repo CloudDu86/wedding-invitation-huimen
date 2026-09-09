@@ -1,13 +1,13 @@
-﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
 Set-Location $PSScriptRoot
 
-$projectName = "wedding-invitation-dy"
+$projectName = "wedding-invitation-huimen"
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host "   婚礼邀请函 Cloudflare Pages 一键部署" -ForegroundColor Yellow
+Write-Host "   回门宴邀请函 Cloudflare Pages 一键部署" -ForegroundColor Yellow
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host ""
 
