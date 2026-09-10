@@ -7,7 +7,7 @@ $projectName = "wedding-invitation-huimen"
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host "   回门宴邀请函 Cloudflare Pages 一键部署" -ForegroundColor Yellow
+Write-Host "   喜宴邀请函 Cloudflare Pages 一键部署" -ForegroundColor Yellow
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host ""
 
