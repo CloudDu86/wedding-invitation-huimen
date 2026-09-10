@@ -189,6 +189,7 @@
       border: 1px solid var(--gold-primary);
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: var(--gold-dark);
       font-family: var(--font-serif);
       font-size: 0.95rem;
@@ -197,16 +198,30 @@
       border-radius: var(--radius-full);
       cursor: pointer;
       text-decoration: none;
-      transition: all 0.25s ease;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
       box-shadow: 0 4px 14px rgba(197, 160, 89, 0.15);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
-    .btn-gold:hover, .btn-gold:active {
+    @media (hover: hover) and (pointer: fine) {
+      .btn-gold:hover {
+        background: var(--gold-gradient);
+        color: #FFF;
+        border-color: transparent;
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-2px);
+      }
+    }
+
+    .btn-gold:active {
       background: var(--gold-gradient);
       color: #FFF;
       border-color: transparent;
       box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
+      transform: scale(0.97);
     }
 
     .btn-gold-solid {
@@ -714,6 +729,16 @@
       font-weight: 500;
       font-size: 0.95rem;
       border: 1px solid rgba(197, 160, 89, 0.2);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+
+    .nav-app-btn:active {
+      transform: scale(0.98);
+      background: #eee6db;
     }
 
     .nav-sheet-cancel {
@@ -725,6 +750,10 @@
       color: var(--text-muted);
       font-size: 0.95rem;
       cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     
@@ -1244,15 +1273,42 @@
       const copyAddrBtn = document.getElementById('copyAddrBtn');
       const HOTEL_ADDRESS = '湖北省黄石市阳新县红星大道50号 三江国际宴会中心酒店 (宝格丽大厅)';
 
+      let navOpenedAt = 0;
+
+      function openNavSheet(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        navOpenedAt = Date.now();
+        if (navModal) navModal.classList.add('active');
+      }
+
+      function closeNavSheet(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (navModal) navModal.classList.remove('active');
+      }
+
       if (openNavSheetBtn && navModal) {
-        openNavSheetBtn.addEventListener('click', () => navModal.classList.add('active'));
+        openNavSheetBtn.addEventListener('click', openNavSheet);
+        openNavSheetBtn.addEventListener('touchend', openNavSheet, { passive: false });
       }
       if (closeNavSheetBtn && navModal) {
-        closeNavSheetBtn.addEventListener('click', () => navModal.classList.remove('active'));
+        closeNavSheetBtn.addEventListener('click', closeNavSheet);
+        closeNavSheetBtn.addEventListener('touchend', closeNavSheet, { passive: false });
       }
       if (navModal) {
         navModal.addEventListener('click', (e) => {
-          if (e.target === navModal) navModal.classList.remove('active');
+          // 阻止移动端打开时的穿透延时误触（Ghost Click）导致刚打开又瞬间关闭
+          if (Date.now() - navOpenedAt < 400) return;
+          if (e.target === navModal) closeNavSheet(e);
+        });
+        navModal.addEventListener('touchend', (e) => {
+          if (Date.now() - navOpenedAt < 400) return;
+          if (e.target === navModal) closeNavSheet(e);
         });
       }
 
@@ -1264,20 +1320,26 @@
         document.execCommand('copy');
         document.body.removeChild(input);
         showToast('已复制详细地址到剪贴板');
-        if (navModal) navModal.classList.remove('active');
+        closeNavSheet();
       }
 
       if (copyAddrBtn) {
-        copyAddrBtn.addEventListener('click', () => {
+        const handleCopy = (e) => {
+          if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(HOTEL_ADDRESS).then(() => {
               showToast('已复制详细地址到剪贴板');
-              if (navModal) navModal.classList.remove('active');
+              closeNavSheet();
             }).catch(() => fallbackCopy(HOTEL_ADDRESS));
           } else {
             fallbackCopy(HOTEL_ADDRESS);
           }
-        });
+        };
+        copyAddrBtn.addEventListener('click', handleCopy);
+        copyAddrBtn.addEventListener('touchend', handleCopy, { passive: false });
       }
 
       /* 8. 右侧悬浮点状导航高亮 & 滚动监听 (IntersectionObserver) */
